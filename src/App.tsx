@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import Button from './components/button/button';
+import { Select } from './components/index';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        {/* <Button onclick={()=>{console.log(1)}}></Button> */}
+        <Select></Select>
       </header>
     </div>
   );
