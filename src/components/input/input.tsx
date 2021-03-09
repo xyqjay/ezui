@@ -22,14 +22,19 @@ interface Props {
 
 function Button({ prefix, size }: Props,) {
     let inputClassName = `${Style['ez-input']} `;
+    // let inputClassName = ``;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} `;
+    let inpuIconClassName = `${Style['action']} `;
     let inputInnerSpanClassName = `${Style['ez-input-prefix']} `;
 
-
+    console.log(size)
     switch (size) {
         case 'big':
+            console.log(inputClassName, 2222)
             inputClassName = inputClassName + `${Style['ez-input-bg']} `;
+            console.log(inputClassName, 11111)
             inputWrapClassName = inputWrapClassName + `${Style['ez-input-affix-wrapper-bg']} `;
+            
             break;
         case 'middle':
             inputClassName = inputClassName + `${Style['ez-input-md']} `;
@@ -43,6 +48,7 @@ function Button({ prefix, size }: Props,) {
             inputClassName = inputClassName + '';
             break;
     }
+
     // switch (type) {
     //     case 'primary':
     //         buttonClasName = buttonClasName + `${Style['ez-btn-primary']} `;
@@ -78,7 +84,7 @@ function Button({ prefix, size }: Props,) {
             {prefix ?
                 <span className={inputWrapClassName}>
                     <span className={inputInnerSpanClassName}>
-                        {/* <span className={inputIcon}>{prefix}</span> */}
+                        <span className={inpuIconClassName}>{prefix}</span>
                     </span>
                     <input type="text" className={inputClassName} />
                 </span>

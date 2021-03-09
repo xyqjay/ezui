@@ -66,7 +66,6 @@ function Button({ size = 'middle', icon, onClick, children, shape = 'circle', ty
 
 
     buttonClasName = buttonClasName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
-
     return (
         <div style={{ marginRight: '20px', display: "inline-block" }}>
             {href ?
