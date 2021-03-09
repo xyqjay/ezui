@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../components/input/input';
+import {Input} from '../components/index';
 
 function DemoInput() {
     return (

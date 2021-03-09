@@ -1,12 +1,11 @@
 import React from 'react';
-import DemoButton from './demo/buttonDemo';
-import DemoInput from './demo/inputDemo';
+import { ButtonDemo, InputDemo } from './demo/index';
 
 function App() {
   return (
     <div>
-      <DemoButton></DemoButton>
-      <DemoInput></DemoInput>
+      <ButtonDemo></ButtonDemo>
+      <InputDemo></InputDemo>
     </div>
   );
 }
