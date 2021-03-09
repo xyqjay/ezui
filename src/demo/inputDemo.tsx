@@ -3,12 +3,12 @@ import Input from '../components/input/input';
 
 function DemoInput() {
     return (
-        <div className="App" >
+        <div className="App" style={{display:'flex',flexDirection:"column",alignItems:'center'}}>
 
             <div style={{ marginBottom: '20px' }}>
                 <Input
                     size='big'
-                    value='11111'
+                    value='1111122'
                     prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
                 ></Input>
                 <Input
