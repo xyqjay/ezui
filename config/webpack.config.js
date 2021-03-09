@@ -508,8 +508,8 @@ module.exports = function (webpackEnv) {
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
                 },
-                'sass-loader',
-              ).concat({
+                'sass-loader'
+              ).concat({ // sass-resources-loader 插件使scss可以使用全局scss文件变量
                   loader: 'sass-resources-loader',
                   options: {
                       resources: [
@@ -538,14 +538,14 @@ module.exports = function (webpackEnv) {
                   },
                 },
                 'sass-loader'
-              ).concat({
-                loader: 'sass-resources-loader',
-                options: {
-                    resources: [
-                        path.resolve(__dirname, '../src/styles/index.scss'),
-                    ]
-                }
-            }),
+              ).concat({ // sass-resources-loader 插件使scss可以使用全局scss文件变量
+                  loader: 'sass-resources-loader',
+                  options: {
+                      resources: [
+                          path.resolve(__dirname, '../src/styles/index.scss'),
+                      ]
+                  }
+              }),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
