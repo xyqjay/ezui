@@ -1,0 +1,212 @@
+// $ButtonColor:$ButtonColor;
+a {
+    text-decoration: none;
+}
+
+.ez-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid getFontColor(0.06);
+}
+
+
+.ez-btn:hover {
+    background: getThemeColor(0.1);
+    border-color: $themeColor;
+}
+
+.ez-btn.ez-btn-primary:hover {
+    background: $themeColor;
+    box-shadow: 0px 6px 10px 0px getFontColor(0.12);
+    border-color: $themeColor;
+}
+
+.ez-btn.ez-btn-text:hover {
+    background: #ffffff;
+    border: none;
+    // font-weight: 500;
+    color: $themeColor;
+    font-family: Montserrat-Medium, Montserrat;
+}
+
+.ez-btn:focus,
+.ez-btn:active:focus,
+.ez-btn.active:focus,
+.ez-btn.focus,
+.ez-btn:active.focus,
+.ez-btn.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+    background: getFontClickColor(0.1);
+    border-color: $fontClickColor;
+}
+
+.ez-btn.ez-btn-primary:focus,
+.ez-btn.ez-btn-primary:active:focus,
+.ez-btn.ez-btn-primary.active:focus,
+.ez-btn.ez-btn-primary.focus,
+.ez-btn.ez-btn-primary:active.focus,
+.ez-btn.ez-btn-primary.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+    background: $fontClickColor;
+    border-color: $fontClickColor;
+}
+
+.ez-btn.ez-btn-text:focus,
+.ez-btn.ez-btn-text:active:focus,
+.ez-btn.ez-btn-text.active:focus,
+.ez-btn.ez-btn-text.focus,
+.ez-btn.ez-btn-text:active.focus,
+.ez-btn.ez-btn-text.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+    font-family: Montserrat-Medium, Montserrat;
+    // font-weight: 500;
+    color: $fontClickColor;
+    background: #ffffff;
+    border: none;
+}
+
+.ez-btn.ez-btn-link:focus,
+.ez-btn.ez-btn-link:active:focus,
+.ez-btn.ez-btn-link.active:focus,
+.ez-btn.ez-btn-link.focus,
+.ez-btn.ez-btn-link:active.focus,
+.ez-btn.ez-btn-link.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+    // font-family: Montserrat-Medium, Montserrat;
+    // font-weight: 500;
+    color: $fontClickColor;
+    background: #ffffff;
+    border: none;
+}
+
+
+
+.ez-btn-bg {
+    padding: 17px 32px;
+
+    .ezicon {
+        width: 16px;
+        height: 16px;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.ez-btn-md {
+    padding: 13px 32px;
+
+    .ezicon {
+        width: 12px;
+        height: 12px;
+
+        img {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.ez-btn-sm {
+    padding: 9px 24px;
+
+    .ezicon {
+        width: 12px;
+        height: 12px;
+
+        img {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.ez-btn .ezicon+span {
+    margin-left: 8px;
+}
+
+.ez-btn-bg.ez-btn-icon-only {
+    padding: 16px;
+}
+
+.ez-btn-md.ez-btn-icon-only {
+    padding: 14px;
+}
+
+.ez-btn-sm.ez-btn-icon-only {
+    padding: 10px;
+}
+
+.ez-btn-bg.ez-btn-circle {
+    border-radius: $borderCircleRadiusBig;
+
+}
+
+.ez-btn-md.ez-btn-circle {
+    border-radius: $borderCircleRadiusMiddle;
+}
+
+.ez-btn-sm.ez-btn-circle {
+    border-radius: $borderCircleRadiusSmall;
+}
+
+.ez-btn-bg.ez-btn-round {
+    border-radius: $borderRoundRadiusBig;
+}
+
+.ez-btn-md.ez-btn-round {
+    border-radius: $borderRoundRadiusMiddle;
+}
+
+.ez-btn-sm.ez-btn-round {
+    border-radius: $borderRoundRadiusSmall;
+}
+
+.ez-btn.ez-btn-primary {
+    background: $themeColor;
+    border-color: $themeColor;
+}
+
+.ez-btn.ez-btn-text {
+    border: none;
+    background: #ffffff;
+    color: $ButtonTextColor;
+    font-weight: 400;
+    font-family: Montserrat-Regular, Montserrat;
+}
+
+.ez-btn.ez-btn-link {
+    border: none;
+    background: #ffffff;
+    color: $ButtonLinkColor;
+}
+
+.ez-btn.ez-btn-disabled {
+    background: getFontColor(0.06) !important;
+    border-color: getFontColor(0.06) !important;
+    color: getFontColor(0.24) !important;
+    box-shadow: 0px 0px 0px 0px !important;
+    cursor: no-drop;
+}
+
+.ez-btn.ez-btn-text.ez-btn-disabled {
+    border: none !important;
+    background-color: #ffffff !important;
+    background: #ffffff;
+    border: none;
+    font-weight: 400;
+    font-family: Montserrat-Regular, Montserrat;
+    cursor: no-drop;
+}
