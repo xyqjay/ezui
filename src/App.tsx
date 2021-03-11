@@ -1,11 +1,12 @@
 import React from 'react';
-import { ButtonDemo, InputDemo } from './demo/index';
+import {  SelectDemo } from './demo/index';
 
 function App() {
   return (
-    <div>
-      <ButtonDemo></ButtonDemo>
-      <InputDemo></InputDemo>
+    <div style={{width:'100vw',paddingTop:'20px',textAlign:'center'}}>
+      {/* <ButtonDemo></ButtonDemo> */}
+      {/* <InputDemo></InputDemo> */}
+      <SelectDemo></SelectDemo>
     </div>
   );
 }

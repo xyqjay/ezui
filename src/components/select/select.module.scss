@@ -1,0 +1,114 @@
+.ez-select{
+    // min-width: 200px;
+    height:40px;
+    width:200px;
+    position:relative;
+    margin:auto;
+    background: rgba(43, 43, 45, 0.03);
+    border-radius: 4px;
+    cursor: pointer;
+    .ez-select-input{
+        height:100%;
+        width:100%;
+        outline: none;
+        border: none;
+        padding:0;
+        opacity:0;
+        cursor: pointer;
+        position: absolute;
+        left:0;
+        z-index:10;
+    }
+    .ez-option-wrap-block{
+        visibility: visible;
+        height:auto;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        width:100%;
+        position:absolute;
+        top:44px;
+        padding:4px 0;
+        overflow: hidden;
+        animation: visible 0.2s ease-in;
+    }
+    @keyframes visible {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .ez-option-wrap-hidden{
+        visibility: hidden;
+        position:absolute;
+        width:100%;
+        top:44px;
+        padding:4px 0;
+        box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+        height:0;
+        // animation: hidden 0.2s ease-in;
+    }
+    // @keyframes hidden {
+    //     from{
+    //         visibility: visible;
+    //         height:auto;
+    //         opacity: 1;
+    //         box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+    //     }
+    //     to{
+    //         visibility: hidden;
+    //         height:0;
+    //         opacity: 0;
+    //         box-shadow: none;
+    //     }
+    // }
+    .icon{
+        position:absolute;
+        right:12px;
+        top:12px;
+        z-index:1;
+    }
+}
+
+// ------ Option -------
+// .ez-option{
+//     width:100%;
+//     height:auto;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+    .ez-option-child{
+        width:100%;
+        line-height: 40px;
+        height:40px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2B2B2D;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        padding-left:2px;
+        box-sizing: border-box;
+        &:hover{
+            background: getThemeColor(0.1);
+        }
+    }
+    .ez-option-child-choose{
+        width:100%;
+        line-height: 40px;
+        height:40px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2B2B2D;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-left:2px solid #FFDA3F;
+        background: #FFFBEB;
+    }
+// }
