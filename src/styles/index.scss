@@ -14,6 +14,9 @@ $borderRoundRadiusBig:4px;
 $borderRoundRadiusMiddle:4px;
 $borderRoundRadiusSmall:4px;
 
+$warnColor:#F44A4A;
+
+
 @function getFontColor($px) {
     @return rgba(43, 43, 45, $px);
 }
@@ -23,4 +26,7 @@ $borderRoundRadiusSmall:4px;
 }
 @function getFontClickColor($px) {
     @return rgba(230, 196, 57, $px);
+}
+@function getWarnColor($px) {
+    @return rgba(244, 74, 74, $px);
 }

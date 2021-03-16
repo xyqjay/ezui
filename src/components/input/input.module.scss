@@ -1,19 +1,12 @@
-.ez-input {
-    
-    padding: 0;
-    display: inline-block;
-}
-.ez-input-bg{
-    // box-sizing: border-box;
-    padding: 0;
-    // display: inline-block;
-}
-.ez-input-affix-wrapper{
-    display: inline-flex;
+.ez-input-affix-wrapper {
+    position: relative;
+    display: flex;
     align-items: center;
     background: getFontColor(0.03);
-    .ez-input{
-        border:  none;
+    border: 1px solid getFontColor(0.03);
+
+    .ez-input {
+        border: none;
         background: transparent;
     }
 }
@@ -23,6 +16,16 @@
     padding: 16px;
     height: 48px;
     border-radius: 4px;
+
+    .ez-input-prefix {
+        .action {
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
 }
 
 .ez-input-affix-wrapper-md {
@@ -30,42 +33,178 @@
     box-sizing: border-box;
     padding: 14px;
     border-radius: 4px;
+
+    .ez-input-prefix {
+        .action {
+            img {
+                width: 12px;
+                height: 12px;
+                margin-right: 6px;
+            }
+        }
+    }
 }
 
 .ez-input-affix-wrapper-sm {
     height: 32px;
     box-sizing: border-box;
-    padding:10px 14px;
+    padding: 10px 14px;
     border-radius: 4px;
+
+    .ez-input-prefix {
+        .action {
+            img {
+                width: 12px;
+                height: 12px;
+                margin-right: 6px;
+            }
+        }
+    }
 }
 
-.ez-input-affix-wrapper-bg {
-    .ez-input-prefix {
-        .action{
-            img{
-                width: 16px;
-                height: 16px;
-            }
+.ez-input-affix-wrapper:hover {
+    border: 1px solid $themeColor;
+}
+
+.ez-input-affix-wrapper.ez-input-affix-wrapper-warn:hover {
+    border: 1px solid $warnColor;
+}
+
+.ez-input:focus,
+.ez-input:active:focus,
+.ez-input.active:focus,
+.ez-input.focus,
+.ez-input:active.focus,
+.ez-input.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+}
+
+.ez-input-affix-wrapper:focus {
+    border: none;
+}
+
+.ez-input-affix-wrapper-warn {
+    border: 1px solid $warnColor;
+}
+
+.ez-input {
+    padding: 0;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Montserrat-Regular, Montserrat;
+    font-weight: 400;
+    color: $fontColor;
+    line-height: 14px;
+    caret-color: $themeColor;
+}
+
+.ez-input-warn {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: $warnColor;
+}
+
+.ez-input-label {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    color: $fontColor;
+}
+
+
+.ez-input-group {
+    .ez-input-affix-wrapper {
+        border-radius: 4px 0 0 4px;
+    }
+
+}
+
+.ez-input-wrapper {
+    display: inline-flex;
+    align-items: center;
+
+    .ez-input-group-addon {
+        button {
+            border-radius: 0px 4px 4px 0px;
         }
+    }
+
+    .ez-input-group-addon-bg {
+        button {
+            height: 48px;
+            // border-radius: 0px 0px 0px 0px;
+        }
+    }
+
+    .ez-input-group-addon-md {
+        button {
+            height: 40px;
+            // border-radius: 0px 0px 0px 0px;
+        }
+    }
+
+    .ez-input-group-addon-sm {
+        button {
+            height: 32px;
+            // border-radius: 0px 0px 0px 0px;
+        }
+
     }
 }
-.ez-input-affix-wrapper-md {
-    .ez-input-prefix {
-        .action{
-            img{
-                width: 12px;
-                height: 12px;
-            }
-        }
-    }
+
+.ez-input-textArea {
+    font-size: 14px;
+    font-family: Montserrat-Regular, Montserrat;
+    font-weight: 400;
+    color: $fontColor;
+    line-height: 22px;
+    caret-color: $themeColor;
+    background: getFontColor(0.03);
+    border-radius: 4px;
+    border-color:transparent;
 }
-.ez-input-affix-wrapper-sm {
-    .ez-input-prefix {
-        .action{
-            img{
-                width: 12px;
-                height: 12px;
-            }
-        }
-    }
+
+.ez-input-textArea:hover {
+    border: 1px solid $themeColor;
+}
+
+.ez-input-textArea:focus,
+.ez-input-textArea:active:focus,
+.ez-input-textArea.active:focus,
+.ez-input-textArea.focus,
+.ez-input-textArea:active.focus,
+.ez-input-textArea.active.focus {
+    outline: none;
+    border-color: transparent; // 若是本身具有 border 请删除此属性
+    box-shadow: none;
+    border: 1px solid $themeColor;
+}
+
+.ez-input-textArea-wrap {
+    display: inline-flex;
+}
+
+.ez-input-textArea-wrap-showData {
+    position: relative;
+    display: inline-flex;
+}
+
+.ez-input-textArea-wrap-showData::after {
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+    float: right;
+    white-space: nowrap;
+    content: attr(data-count);
+    // content: '111';
+    pointer-events: none;
+    font-size: 12px;
+    font-family: Montserrat-Regular, Montserrat;
+    font-weight: 400;
+    color: getFontColor(0.4);
+    line-height: 12px;
+
 }
