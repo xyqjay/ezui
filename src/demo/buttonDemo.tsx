@@ -7,7 +7,7 @@ function DemoButton() {
       <div style={{ display: 'flex', flexDirection: "column" }}>
         <div>主要按钮</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div className="big" style={{ display: "flex", alignItems:"center" }}>
+          <div className="big" style={{ display: "flex", alignItems: "center" }}>
             <Button
               // onClick={() => { console.log(1234565) }}
               size='big'
@@ -114,7 +114,7 @@ function DemoButton() {
           </div>
 
         </div>
-        <div>次要按钮</div>
+        <div>二级按钮</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className="big">
             <Button
@@ -205,6 +205,114 @@ function DemoButton() {
             ></Button>
           </div>
         </div>
+        <div>三级按钮</div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div className="big">
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='big'
+              shape='circle'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='big'
+              type='dashed'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />} shape='circle'
+            >Primary</Button>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='big' shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='big'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='big'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            ></Button>
+          </div>
+          <div className="middle" style={{ margin: '30px' }}>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='middle'
+              shape='circle'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='middle'
+              type='dashed'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />} shape='circle'
+            >Primary</Button>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='middle'
+              shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='middle'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='middle'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            ></Button>
+          </div>
+
+          <div className="small" style={{ margin: '30px' }}>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='small'
+              shape='circle'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='small'
+              type='dashed'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />} shape='circle'
+            >Primary</Button>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='small' shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='small'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              size='small'
+              icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+              shape='round'
+              type='dashed'
+            ></Button>
+          </div>
+        </div>
+
         <div>文字按钮</div>
 
         <div style={{ margin: '30px' }}>
@@ -261,14 +369,14 @@ function DemoButton() {
           <div style={{ margin: '30px' }}>
 
             <Button
-              // onClick={() => { console.log(1234565) }}
+            // onClick={() => { console.log(1234565) }}
             >Primary</Button>
 
             <Button
-              // onClick={() => { console.log(1234565) }}
+            // onClick={() => { console.log(1234565) }}
             >Primary</Button>
             <Button
-              // onClick={() => { console.log(1234565) }}
+            // onClick={() => { console.log(1234565) }}
             >Primary</Button>
 
             <Button
@@ -277,6 +385,30 @@ function DemoButton() {
             >Primary</Button>
 
           </div>
+          <div style={{ margin: '30px' }}>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              type='dashed'
+            >Primary</Button>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              type='dashed'
+            >Primary</Button>
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              type='dashed'
+            >Primary</Button>
+
+            <Button
+              // onClick={() => { console.log(1234565) }}
+              type='dashed'
+              disabled={true}
+            >Primary</Button>
+
+          </div>
+
           <div style={{ margin: '30px' }}>
 
             <Button
@@ -303,43 +435,6 @@ function DemoButton() {
 
         </div>
       </div>
-      {/* <div style={{ marginBottom: '20px' }}>
-        <Input
-          size='big'
-          value='11111'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-        ></Input>
-        <Input
-          size='big'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-
-        ></Input>
-      </div>
-      <div style={{ marginBottom: '20px' }}>
-        <Input
-          size='middle'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-
-        ></Input>
-        <Input
-          size='middle'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-
-        ></Input>
-      </div>
-      <div style={{ marginBottom: '20px' }}>
-        <Input
-          size='small'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-
-        ></Input>
-        <Input
-          size='small'
-          prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
-
-        ></Input>
-      </div> */}
-
     </div>
   );
 }

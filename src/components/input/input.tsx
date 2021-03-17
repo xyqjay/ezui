@@ -24,7 +24,8 @@ interface Props {
     label?: string,	//是否是warn状态
     onChange?: () => void,//	输入框内容变化时的回调	function(e)	-	
     onPressEnter?: () => void,//
-    style?:object
+    style?: object,
+    className?: string
 }
 
 interface SearchProps {
@@ -50,7 +51,8 @@ interface SearchProps {
     enterButton?: ReactElement | string,//	是否有确认按钮，可设为按钮文字。该属性会与 addonAfter 冲突。	boolean | ReactNode	false
     loading?: string//	搜索 loading	boolean	false
     onSearch?: () => void,
-    style?:object
+    style?: object,
+    className?: string
 }
 interface TextAreaProps {
     allowClear?: boolean,	//	可以点击清除图标删除内容	boolean	false	
@@ -68,7 +70,8 @@ interface TextAreaProps {
     rows?: string,
     id?: number | string,
     name?: number | string,
-    style?:object,
+    style?: object,
+    className?: string
 }
 // interface InputNumberProps {
 //     autoFocus?: boolean,	//	自动获取焦点	boolean	false	-
@@ -91,9 +94,9 @@ interface TextAreaProps {
 //     onPressEnter?: () => void,	//	按下回车的回调	function(e)	-	-
 //     onStep?: () => void,	//	点击上下箭头的回调	(value: number, info: { offset: number, type: 'up' | 'down' }) => void	-
 // }
-function Input({ prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue,style }: Props,) {
+function Input({ prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue, style, className='' }: Props,) {
     let inputClassName = `${Style['ez-input']} `;
-    let inputWrapClassName = `${Style['ez-input-affix-wrapper']} `;
+    let inputWrapClassName = `${Style['ez-input-affix-wrapper']} ${className}`;
     let inpuIconClassName = `${Style['action']} `;
     let inputInnerSpanClassName = `${Style['ez-input-prefix']} `;
     let warnClassName = `${Style['ez-input-warn']} `;
@@ -114,7 +117,6 @@ function Input({ prefix, size, value, placeholder, warn, warnText, label, onChan
             break;
     }
     inputWrapClassName = inputWrapClassName + (warn ? `${Style['ez-input-affix-wrapper-warn']} ` : '');
-
     return (
         <span className={inputWrapClassName} style={style}>
             {label ? <span className={labelClassName} >{label}</span> : ''}
@@ -127,17 +129,16 @@ function Input({ prefix, size, value, placeholder, warn, warnText, label, onChan
         </span>
     );
 }
-Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue ,style}: SearchProps,) {
+Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue, style, className='' }: SearchProps,) {
     let inputClassName = `${Style['ez-input']} `;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} `;
     let inpuIconClassName = `${Style['action']} `;
     let inputInnerSpanClassName = `${Style['ez-input-prefix']} `;
     let warnClassName = `${Style['ez-input-warn']} `;
     let labelClassName = `${Style['ez-input-label']} `;
-
     let buttonClassName = `${Style['ez-input-group-addon']} `;
     let wrapClassName = `${Style['ez-input-wrapper']} `;
-    wrapClassName = wrapClassName + `${Style['ez-input-group']} `;
+    wrapClassName = wrapClassName + `${Style['ez-input-group']} ${className}`;
     switch (size) {
         case 'big':
             inputWrapClassName = inputWrapClassName + `${Style['ez-input-affix-wrapper-bg']} `;
@@ -157,40 +158,34 @@ Input.Search = function Search({ prefix, size = 'middle', value, placeholder, wa
     }
     inputWrapClassName = inputWrapClassName + (warn ? `${Style['ez-input-affix-wrapper-warn']} ` : '');
     inputWrapClassName = inputWrapClassName + `${Style['ez-input-affix-wrapper']} `;
-    // inputWrapClassName = inputWrapClassName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
-
     return (
-            <span className={wrapClassName} style={style}>
-                <span className={inputWrapClassName}>
-                    {label ? <span className={labelClassName} >{label}</span> : ''}
-                    {prefix ?
-                        <span className={inputInnerSpanClassName}>
-                            <span className={inpuIconClassName}>{prefix}</span>
-                        </span> : ''}
-                    <input type="text" className={inputClassName} defaultValue={defaultValue} value={value} placeholder={placeholder} />
-
-
-                    {warnText ? <span className={warnClassName} >{warnText}</span> : ''}
-                </span>
-                <span className={buttonClassName}>
-                    <Button onClick={onSearch}
-                        size={size}
-                        icon={suffix ? suffix : ''}
-                        shape='round'
-                        type='primary'
-                    >{enterButton}</Button>
-                </span>
+        <span className={wrapClassName} style={style}>
+            <span className={inputWrapClassName}>
+                {label ? <span className={labelClassName} >{label}</span> : ''}
+                {prefix ?
+                    <span className={inputInnerSpanClassName}>
+                        <span className={inpuIconClassName}>{prefix}</span>
+                    </span> : ''}
+                <input type="text" className={inputClassName} defaultValue={defaultValue} value={value} placeholder={placeholder} />
+                {warnText ? <span className={warnClassName} >{warnText}</span> : ''}
             </span>
+            <span className={buttonClassName}>
+                <Button onClick={onSearch}
+                    size={size}
+                    icon={suffix ? suffix : ''}
+                    shape='round'
+                    type='primary'
+                >{enterButton}</Button>
+            </span>
+        </span>
     );
 }
 
-Input.TextArea = function TextArea({ cols = "40", rows = "4", value, onChange, defaultValue, showCount, maxLength,style }: TextAreaProps,) {
+Input.TextArea = function TextArea({ cols = "40", rows = "4", value, onChange, defaultValue, showCount, maxLength, style, className='' }: TextAreaProps,) {
     let textAreaClassName = `${Style['ez-input-textArea']} `;
-    let textAreaWrapClassName = `${Style['ez-input-textArea-wrap']} `;
+    let textAreaWrapClassName = `${Style['ez-input-textArea-wrap']} ${className}`;
     textAreaWrapClassName = textAreaWrapClassName + (showCount ? `${Style['ez-input-textArea-wrap-showData']} ` : '');
-
     let [valueCurrent, setValue] = useState(value ? value : defaultValue ? defaultValue : '');
-
     let change = function (e) {
         setValue(e.target.value)
         if (onChange) {
@@ -207,13 +202,4 @@ Input.TextArea = function TextArea({ cols = "40", rows = "4", value, onChange, d
         </div>
     );
 }
-// Input.InputNumber = function InputNumber({ }: InputNumberProps,) {
-//     // let textAreaClassName = `${Style['ez-input-textArea']} `;
-
-//     return (
-//         <div style={{ marginRight: '20px', display: "inline-block" }}>
-//             {/* <textarea value={value} name="" id="" cols={parseInt(cols)} defaultValue={defaultValue} rows={parseInt(rows)} onChange={onChange} className={textAreaClassName}></textarea> */}
-//         </div>
-//     );
-// }
 export default Input;

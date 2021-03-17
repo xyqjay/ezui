@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import Style from './button.module.scss';
 
-
 interface Props {
     block?: boolean,//将按钮宽度调整为其父宽度的选项
     danger?: boolean,	//设置危险按钮
@@ -14,16 +13,27 @@ interface Props {
     shape?: string,//设置按钮形状  circle | round
     size?: string,	//设置按钮大小  large | middle | small	
     target?: string,	//相当于 a 链接的 target 属性，href 存在时生效	string	-	
-    type?: string,	//设置按钮类型	primary | ghost | dashed | link | text | default	default	
+    type?: string,	//设置按钮类型	primary主要 | ghost | dashed三级 | link | text | default二级	default	
     onClick?: () => void,//点击按钮时的回调
     children?: string | ReactElement,
     style?: object,
     className?: string
 }
 
-function Button({ size = 'middle', icon, onClick, children, shape = 'circle', type, disabled, href, target, style, className }: Props,) {
+function Button({
+    size = 'middle',
+    icon,
+    onClick,
+    children,
+    shape = 'circle',
+    type,
+    disabled,
+    href,
+    target,
+    style,
+    className = '' }: Props,) {
     let buttonClasName = `${Style['ez-btn']} `;
-    buttonClasName = buttonClasName + (className ? className : '')
+    buttonClasName = ` ${buttonClasName} ${className}`
     let ezIconClassName = `${Style['ezicon']} `;
 
     switch (size) {
@@ -50,8 +60,11 @@ function Button({ size = 'middle', icon, onClick, children, shape = 'circle', ty
         case 'link':
             buttonClasName = buttonClasName + `${Style['ez-btn-link']} `;
             break;
+        case 'dashed':
+            buttonClasName = buttonClasName + `${Style['ez-btn-dashed']} `;
+            break;
         default:
-            buttonClasName = buttonClasName + '';
+            buttonClasName = buttonClasName + `${Style['ez-btn-default']} `;
             break;
     }
     switch (shape) {
@@ -66,10 +79,7 @@ function Button({ size = 'middle', icon, onClick, children, shape = 'circle', ty
             break;
     }
     buttonClasName = buttonClasName + (children ? '' : icon ? `${Style['ez-btn-icon-only']} ` : '');
-
-
     buttonClasName = buttonClasName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
-    // console.log(onClick)
     return (
         href ?
             <a style={style} href={href} target={target}>
@@ -80,7 +90,6 @@ function Button({ size = 'middle', icon, onClick, children, shape = 'circle', ty
                         } else if (onClick) {
                             onClick()
                         }
-
                     }}
                     className={buttonClasName}>
                     {icon ? <span className={ezIconClassName}>{icon}</span> : ''}
@@ -94,13 +103,11 @@ function Button({ size = 'middle', icon, onClick, children, shape = 'circle', ty
                     } else if (onClick) {
                         onClick()
                     }
-
                 }}
                 className={buttonClasName}>
                 {icon ? <span className={ezIconClassName}>{icon}</span> : ''}
                 {children ? <span >{children}</span> : ''}
             </button>
-
     );
 }
 export default Button;
