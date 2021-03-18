@@ -1,80 +1,123 @@
-import React, { Component, ReactElement } from 'react';
+import React, { ReactElement, useRef, useState, useEffect } from 'react';
 import Style from './select.module.scss';
-// let Option = require('./option');
-// import 
 
 interface Props {
     onClick?: () => void,
+    onChange?: (key?:string | number, value?:string | number) => void,
+    placeholder?: string,
+    multiple?: boolean,
+    autofocus?: boolean,
+    disabled?: boolean,
     children?: ReactElement | ReactElement[],
-    onChange?: (key?:string | number, value?:string | number) => void
-}
-interface State {
-    // bool?:boolean,
-    ezOptionWrapClass?: string,
-    inputValue?: string | number
+    size?: 'large'
 }
 
-class Select extends Component<Props, State>{
-    constructor(props){
-        super(props)
-        this.state = {
-            // bool:true,
-            ezOptionWrapClass:`${Style['ez-option-wrap-hidden']}`,
-            inputValue:''
+let bool = true;
+const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Props) => {
+    let selectClass = Style['ez-select'];
+    let optionClass = Style['ez-option-child'];
+    let optionChooseClass = Style['ez-option-child-choose'];
+    let inputClass = Style['ez-select-input'];
+    if(size && size === 'large'){
+        selectClass = selectClass + ' ' + Style['ez-select-large'];
+        optionClass = optionClass + ' ' + Style['ez-option-child-large'];
+        optionChooseClass = optionChooseClass + ' ' + Style['ez-option-child-large'];
+    }
+    if(disabled){
+        selectClass = selectClass + ' ' + Style['ez-select-disabled'];
+        inputClass = inputClass + ' ' + Style['ez-select-disabled'];
+    }
+    const selectRef: any = useRef();
+    const optionRef: any = useRef();
+    let optionWrapBottom: number;
+    useEffect(()=>{
+        optionWrapBottom = selectRef.current.getBoundingClientRect().bottom + 4 + optionRef.current.getBoundingClientRect().height;
+    })
+
+    const inputRef:any = useRef(null);
+    let [ezOptionWrapClass, setezOptionWrapClass] = useState(Style['ez-option-wrap-hidden']);
+    function click() {
+        if(disabled){
+            setezOptionWrapClass(Style['ez-option-wrap-hidden']);
+            return;
+        }
+        if(window.innerHeight - optionWrapBottom < 0 && (selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 4 || selectRef.current.getBoundingClientRect().top > window.innerHeight - selectRef.current.getBoundingClientRect().bottom )){
+            bool ? setezOptionWrapClass(Style['ez-option-wrap-block-top']) : setezOptionWrapClass(Style['ez-option-wrap-hidden']);
+            optionWrapBottom = optionRef.current.getBoundingClientRect().bottom;
+        } else {
+            bool ? setezOptionWrapClass(Style['ez-option-wrap-block']) : setezOptionWrapClass(Style['ez-option-wrap-hidden']);
+        }
+        bool = !bool;
+        onClick && onClick();
+        inputRef.current.focus();
+    }
+    function optionClick(e,Key?: string | number,value?: string | number){
+        e.stopPropagation();
+        e.persist();
+        setezOptionWrapClass(Style['ez-option-wrap-hidden']);
+        onChange && onChange(Key,value);
+        inputRef.current.blur();
+    }
+    function blur(e) {
+        e.persist();
+        setezOptionWrapClass(Style['ez-option-wrap-hidden']);
+        bool = true;
+    }
+    function focus() {
+        if(disabled){
+            setezOptionWrapClass(Style['ez-option-wrap-hidden'])
+            return;
+        }
+        if(window.innerHeight - optionWrapBottom < 0 && selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 4){
+            setezOptionWrapClass(Style['ez-option-wrap-block-top']);
+            optionWrapBottom = optionRef.current.getBoundingClientRect().bottom;
+        } else {
+            setezOptionWrapClass(Style['ez-option-wrap-block']);
         }
     }
-    componentDidMount(): void {
-        // console.log(this.props)
-        document.addEventListener('click',this.clickHandle);
-    }
-    componentWillUnmount(){
-        document.removeEventListener('click',this.clickHandle);
-    }
-    clickHandle = (e) => {
-        // console.log(e.target,e.target.className)
-        if(e.target.className.indexOf('select_ez') !== -1 || this.state.ezOptionWrapClass === Style['ez-option-wrap-hidden']){
-            // console.log('拦截')
-            return
-        }
-        // console.log('隐藏')
-        this.setState({ezOptionWrapClass:Style['ez-option-wrap-hidden']});
-    }
-    click = () => {
-        if(this.state.ezOptionWrapClass === Style['ez-option-wrap-hidden']){
-            this.setState({ezOptionWrapClass:Style['ez-option-wrap-block']})
-        }else{
-            this.setState({ezOptionWrapClass:Style['ez-option-wrap-hidden']})
-        }
-        this.props.onClick && this.props.onClick();
-    }
-    render(): React.ReactNode{
-        return(
-            <div className={Style['ez-select']} onClick={()=>{this.click();}} >
-                <input className={Style['ez-select-input']} value={this.state.inputValue} onChange={()=>{}}/>
-                <span className={Style.icon}>
-                    <svg className='icon' aria-hidden='true'>
-                        <use xlinkHref='#iconicon_placeholder'></use>
-                    </svg>
-                </span>
-                <div className={this.state.ezOptionWrapClass} onClick={()=>{console.log()}}>
-                    {/* {this.props.children} */}
-                    {Array.isArray(this.props.children) && this.props.children.length > 0 ? (this.props.children as []).map(((item:any,index:number)=>{
-                        // console.log(item)
-                        let optionClass = Style['ez-option-child'];
-                        if(item.props.value === this.state.inputValue){
-                            optionClass = Style['ez-option-child-choose']
-                        }
-                        return <div key={index} onClick={()=>{
-                            // console.log(item.props)
-                            this.setState({inputValue:item.props.value},()=>{
-                                this.props.onChange && this.props.onChange(item.props.Key,this.state.inputValue);
-                            })
-                        }} className={optionClass}>{item}</div>
-                    })) : this.props.children}
-                </div>
+    const [optionValue, setOptionValue] = useState('');
+    return (
+        <div ref={selectRef} className={selectClass} onClick={click}>
+            <input ref={inputRef} className={inputClass} placeholder={placeholder} value={optionValue} onBlur={blur} onFocus={focus} onChange={() => { }} />
+            <span className={Style.icon}>
+                <svg className='icon' aria-hidden='true'>
+                    <use xlinkHref='#iconicon_placeholder'></use>
+                </svg>
+            </span>
+            <div ref={optionRef} className={ezOptionWrapClass}>
+                {(ezOptionWrapClass === Style['ez-option-wrap-block'] || ezOptionWrapClass === Style['ez-option-wrap-block-top']) && Array.isArray(children) && children.length > 0 ? children.map(function(item,index){
+                    if(item.props.value === optionValue){
+                        return <div key={index} className={optionChooseClass} onClick={(e)=>{
+                            setOptionValue(item.props.value);
+                            optionClick(e,item.props.Key,item.props.value);
+                        }}>{item}</div>
+                    }
+                    return <div key={index} className={optionClass} onClick={(e)=>{
+                        setOptionValue(item.props.value);
+                        optionClick(e,item.props.Key,item.props.value);
+                    }}>{item}</div>
+                }) : children}
             </div>
-        )
-    }
+        </div>
+    )
 }
 
+interface optionProps {
+    value?: string | number,
+    Key?: string | number,
+    children?: string | number,
+    icon?: ReactElement,
+}
+const Option = ({ children, icon }: optionProps) => {
+    return (
+        <div className={Style['ez-option']} onMouseDown={(e)=>{
+            e.preventDefault();
+        }}>
+            <span className={Style['ez-option-icon']}>{icon}</span>
+            {children}
+        </div>
+    )
+}
+
+Select.Option = Option;
 export default Select;
