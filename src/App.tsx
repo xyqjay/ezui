@@ -1,12 +1,27 @@
 import React from 'react';
-import {  SelectDemo } from './demo/index';
+import DemoButton from './demo/buttonDemo';
+// import DemoInput from './demo/inputDemo';
+import DemoModal from './demo/modalDemo';
+import DemoRadio from './demo/radioDemo';
+import DemoProgress from './demo/progressDemo';
+import DemoTag from './demo/tagDemo';
+import DemoSelect from './demo/selectDemo';
 
 function App() {
   return (
-    <div style={{width:'100vw',paddingTop:'20px',textAlign:'center'}}>
-      {/* <ButtonDemo></ButtonDemo> */}
-      {/* <InputDemo></InputDemo> */}
-      <SelectDemo></SelectDemo>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <DemoButton></DemoButton>
+      {/* <DemoInput></DemoInput>  */}
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoModal></DemoModal>
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoRadio></DemoRadio>
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoProgress></DemoProgress>
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoTag></DemoTag>
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoSelect></DemoSelect>
     </div>
   );
 }

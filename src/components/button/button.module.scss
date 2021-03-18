@@ -1,4 +1,3 @@
-// $ButtonColor:$ButtonColor;
 a {
     text-decoration: none;
 }
@@ -8,26 +7,36 @@ a {
     justify-content: center;
     align-items: center;
     background: #ffffff;
-    border: 1px solid getFontColor(0.06);
+    border: $buttonBorderWidth solid $themeColorClass_4;
+    font-weight: 500;
 }
 
 
 .ez-btn:hover {
-    background: getThemeColor(0.1);
-    border-color: $themeColor;
+    background: $themeColorClass_3;
+    border-color: $themeColorClass_2;
+}
+.ez-btn.ez-btn-default:hover {
+    background: $themeColorClass_2;
+    border-color: $themeColorClass_2;
+    color: $fontColor;
+}
+.ez-btn.ez-btn-dashed:hover {
+    background: #ffffff;
+    border-color: $themeColorClass_2;
+    color: $themeColorClass_2;
 }
 
 .ez-btn.ez-btn-primary:hover {
-    background: $themeColor;
+    background: $themeColorClass_3;
     box-shadow: 0px 6px 10px 0px getFontColor(0.12);
-    border-color: $themeColor;
+    border-color: $themeColorClass_3;
 }
 
 .ez-btn.ez-btn-text:hover {
     background: #ffffff;
     border: none;
-    // font-weight: 500;
-    color: $themeColor;
+    color: $themeColorClass_2;
     font-family: Montserrat-Medium, Montserrat;
 }
 
@@ -38,12 +47,34 @@ a {
 .ez-btn:active.focus,
 .ez-btn.active.focus {
     outline: none;
-    border-color: transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
-    background: getFontClickColor(0.1);
-    border-color: $fontClickColor;
+    background: $themeColorClass_1;
+    border-color: $themeColorClass_4;
 }
-
+.ez-btn.ez-btn-default:focus,
+.ez-btn.ez-btn-default:active:focus,
+.ez-btn.ez-btn-default.active:focus,
+.ez-btn.ez-btn-default.focus,
+.ez-btn.ez-btn-default:active.focus,
+.ez-btn.ez-btn-default.active.focus {
+    outline: none;
+    box-shadow: none;
+    background: $themeColorClass_1;
+    border-color: $themeColorClass_1;
+    color:$fontColor;
+}
+.ez-btn.ez-btn-dashed:focus,
+.ez-btn.ez-btn-dashed:active:focus,
+.ez-btn.ez-btn-dashed.active:focus,
+.ez-btn.ez-btn-dashed.focus,
+.ez-btn.ez-btn-dashed:active.focus,
+.ez-btn.ez-btn-dashed.active.focus {
+    outline: none;
+    box-shadow: none;
+    background:#ffffff;
+    border-color: $themeColorClass_1;
+    color:$themeColorClass_1;
+}
 .ez-btn.ez-btn-primary:focus,
 .ez-btn.ez-btn-primary:active:focus,
 .ez-btn.ez-btn-primary.active:focus,
@@ -51,10 +82,9 @@ a {
 .ez-btn.ez-btn-primary:active.focus,
 .ez-btn.ez-btn-primary.active.focus {
     outline: none;
-    border-color: transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
-    background: $fontClickColor;
-    border-color: $fontClickColor;
+    background: $themeColorClass_1;
+    border-color: $themeColorClass_1;
 }
 
 .ez-btn.ez-btn-text:focus,
@@ -64,11 +94,10 @@ a {
 .ez-btn.ez-btn-text:active.focus,
 .ez-btn.ez-btn-text.active.focus {
     outline: none;
-    border-color: transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
     font-family: Montserrat-Medium, Montserrat;
     // font-weight: 500;
-    color: $fontClickColor;
+    color: $themeColorClass_1;
     background: #ffffff;
     border: none;
 }
@@ -80,17 +109,11 @@ a {
 .ez-btn.ez-btn-link:active.focus,
 .ez-btn.ez-btn-link.active.focus {
     outline: none;
-    border-color: transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
-    // font-family: Montserrat-Medium, Montserrat;
-    // font-weight: 500;
-    color: $fontClickColor;
+    color: $themeColorClass_4;
     background: #ffffff;
     border: none;
 }
-
-
-
 .ez-btn-bg {
     padding: 17px 32px;
 
@@ -175,10 +198,19 @@ a {
 }
 
 .ez-btn.ez-btn-primary {
-    background: $themeColor;
-    border-color: $themeColor;
+    background: $themeColorClass_2;
+    border-color: $themeColorClass_2;
 }
-
+.ez-btn.ez-btn-default {
+    background: #ffffff;
+    border-color: $themeColorClass_2;
+    color:$themeColorClass_2;
+}
+.ez-btn.ez-btn-dashed {
+    background: #ffffff;
+    border-color: getFontColor(0.08);
+    color:$fontColor;
+}
 .ez-btn.ez-btn-text {
     border: none;
     background: #ffffff;
@@ -195,7 +227,7 @@ a {
 
 .ez-btn.ez-btn-disabled {
     background: getFontColor(0.06) !important;
-    border-color: getFontColor(0.06) !important;
+    border-color: transparent !important;
     color: getFontColor(0.24) !important;
     box-shadow: 0px 0px 0px 0px !important;
     cursor: no-drop;

@@ -1,11 +1,15 @@
-$themeColor: #FFDA3F;
+$themeColorClass_1: #E6C439;
+$themeColorClass_2: #FFDA3F;
+$themeColorClass_3: #FFE98C;
+$themeColorClass_4: #FFFBEB;
+
+
 $fontColor: #2B2B2D;
-$fontClickColor:  #E6C439;
 
 
 $ButtonTextColor: #FFDA3F;
 $ButtonLinkColor: #007AF5;
-// $ButtonColor: red;
+
 $borderCircleRadiusBig:24px;
 $borderCircleRadiusMiddle:20px;
 $borderCircleRadiusSmall:20px;
@@ -14,13 +18,13 @@ $borderRoundRadiusBig:4px;
 $borderRoundRadiusMiddle:4px;
 $borderRoundRadiusSmall:4px;
 
+$buttonBorderWidth:1px;
+
+$warnColor:#F44A4A;
+
 @function getFontColor($px) {
     @return rgba(43, 43, 45, $px);
 }
-
-@function getThemeColor($px) {
-    @return rgba(255, 218, 63, $px);
-}
-@function getFontClickColor($px) {
-    @return rgba(230, 196, 57, $px);
+@function getWarnColor($px) {
+    @return rgba(244, 74, 74, $px);
 }
