@@ -6,7 +6,8 @@ const { Option } = Select;
 function SelectDemo () {
     // console.log(Option)
     return(
-        <div style={{display:'flex'}}>
+        <div style={{display:'flex', flexDirection: "column",textAlign:'center'}}>
+            <div>11.下拉框</div>
             <Select onClick={()=>{
                 // console.log('子组件')
             }} onChange={(key,value)=>{
@@ -24,7 +25,7 @@ function SelectDemo () {
                 <Option Key={8} value={8}>8</Option>
                 <Option Key={'abc'} value={'abcdefghijklmnopqrstuvwxyz'}>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</Option>
             </Select>
-
+            <div style={{height:'10px'}}></div>
             <Select onClick={()=>{
                 // console.log('子组件')
             }} onChange={(key,value)=>{
