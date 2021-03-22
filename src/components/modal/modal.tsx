@@ -125,7 +125,7 @@ Modal.Popover = function Popover({
     centered = false,
     placement = 'bottom',
     style,
-    className
+    className=''
 }: Props,) {
     let modalContentClassName = `${Style['ez-modal-content']} `;
     modalContentClassName = modalContentClassName + (centered ? `${Style['ez-modal-content-center']} ` : '')
@@ -148,7 +148,7 @@ Modal.Popover = function Popover({
     }
     modalTrangleClassName = modalTrangleClassName + `${Style['ez-modal-trangle-' + placement]} `;
     return (
-        <div className={`${Style['ez-modal-mask']} ` + className ? className : ''} style={style}>
+        <div className={`${Style['ez-modal-mask']} ` + className}style={style}>
             <div className={`${Style['ez-modal-wrap']} `}>
                 <div className={modalContentClassName} style={{ width }}>
                     <div className={modalTrangleClassName}></div>

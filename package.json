@@ -1,8 +1,6 @@
 {
-  "name": "eaui",
-  "version": "0.1.0",
-  "private": true,
-  "main": "index.tsx",
+  "name": "ezui",
+  "version": "1.0.5",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -22,8 +20,10 @@
     "babel-plugin-named-asset-import": "^0.3.7",
     "babel-preset-react-app": "^10.0.0",
     "bfj": "^7.0.2",
+    "camel12122225": "^1.0.0",
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "classnames": "^2.2.6",
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -168,5 +168,16 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://oauth:shKFEqh_nYmnwxvGsQxe@git.lumi-class.com/h5/ezui.git"
+  },
+  "keywords": [
+    "12345"
+  ],
+  "author": "cx",
+  "license": "ISC"
 }

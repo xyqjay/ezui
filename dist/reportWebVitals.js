@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -22,6 +23,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var reportWebVitals = function (onPerfEntry) {
     if (onPerfEntry && onPerfEntry instanceof Function) {
         Promise.resolve().then(function () { return __importStar(require('web-vitals')); }).then(function (_a) {
+=======
+var reportWebVitals = function (onPerfEntry) {
+    if (onPerfEntry && onPerfEntry instanceof Function) {
+        import('web-vitals').then(function (_a) {
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
             var getCLS = _a.getCLS, getFID = _a.getFID, getFCP = _a.getFCP, getLCP = _a.getLCP, getTTFB = _a.getTTFB;
             getCLS(onPerfEntry);
             getFID(onPerfEntry);
@@ -31,4 +37,8 @@ var reportWebVitals = function (onPerfEntry) {
         });
     }
 };
+<<<<<<< HEAD
 exports.default = reportWebVitals;
+=======
+export default reportWebVitals;
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad

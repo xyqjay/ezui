@@ -242,11 +242,16 @@
         "affectsGlobalScope": true
       },
       "../src/components/button/button.tsx": {
+<<<<<<< HEAD
         "version": "0c96309e53a57e07b0210ed0584b793dd6569febb1e6907ec958c2c89f7e888b",
+=======
+        "version": "7e97b069bc12cb7c113a1336077865f798fb4854fdc5cfa6b693d8d6039aa42a",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "signature": "c551118568a0d43d55e420d483fb23a308a5a3dc1b72e8b4757563e070ef2d2e",
         "affectsGlobalScope": false
       },
       "../src/components/input/input.tsx": {
+<<<<<<< HEAD
         "version": "61046c8b67d16f1890e03a82724cca046ef44ae107022018d4db33680fd9858c",
         "signature": "29df186a5a1f917ee8355efc5832cc601834b15a8beccf18b3a76021cdfc3a63",
         "affectsGlobalScope": false
@@ -256,6 +261,12 @@
         "signature": "8a25d800f444de199a415003b49a12aeb183b7498d976c252555a3a444ffb52f",
         "affectsGlobalScope": false
       },
+=======
+        "version": "b3103838c9a45a11bb53244d3f294132c433e27e88e6bfa5883790d4e1830f93",
+        "signature": "29df186a5a1f917ee8355efc5832cc601834b15a8beccf18b3a76021cdfc3a63",
+        "affectsGlobalScope": false
+      },
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../src/components/modal/modal.tsx": {
         "version": "fd2779a327b71706764d2409aac5a57551b7f2d79a971b364c6084c22d31721e",
         "signature": "352163366013062e47fddf095db52795b9510eb819d9212f26df17f60ff93375",
@@ -282,8 +293,13 @@
         "affectsGlobalScope": false
       },
       "../src/components/index.tsx": {
+<<<<<<< HEAD
         "version": "4d30d740492434d3a39ce9113495d1d66295b2f864f9ef6730a0aecc67486786",
         "signature": "e7c2fb8a1d7b440903070b137f1d718a5ee6f9b063bfa220e894e3cc8f0d7379",
+=======
+        "version": "be45ff6eb279464b714c51cef07a8b7838138f0f8b5b34eda137f3156646ca23",
+        "signature": "6f9748bf9c665911212159e0e6bf640a0667527cc4c4827e3ad84410b65f2084",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "affectsGlobalScope": false
       },
       "../src/demo/buttondemo.tsx": {
@@ -311,6 +327,7 @@
         "signature": "e639218d5919839c9ae8f3518a8a86fdaa0ea969d920ba729ea200dcb8a9dace",
         "affectsGlobalScope": false
       },
+<<<<<<< HEAD
       "../src/demo/selectdemo.tsx": {
         "version": "94701f2e2ed5beb1cc6cf9852f44faddb9d7de33a8e08a414f884c586050e91d",
         "signature": "475875e07f34ddf0f329475aebbf87a46946486c0dbb43828ebacb3f81163ed3",
@@ -318,6 +335,10 @@
       },
       "../src/app.tsx": {
         "version": "eccf7627b5ce30ba3dd614d7464ea15f1f4e4e62b330db5bed27f242f2beaf8c",
+=======
+      "../src/app.tsx": {
+        "version": "05a5a53d67ff357a8d23f5fe1f9b47400288205345a087938c1ce75e97074bad",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "signature": "7e848b5d310adb40f89d047f3330935721152c7065fe1bd4c5792c2f3cc21ac3",
         "affectsGlobalScope": false
       },
@@ -367,8 +388,13 @@
         "affectsGlobalScope": false
       },
       "../src/index.tsx": {
+<<<<<<< HEAD
         "version": "329f37211d66212c4422afcb308398d3089247dce993d7ffbcf294fd77b5a933",
         "signature": "5e27e58e235a551ef56cb47dbd7c7f4686e88886a9cf1d8b6226833f84013fff",
+=======
+        "version": "594b737f2f9c9bacdfa459d25f7c50cde2053e4aa816b55f65ddd4c037802ca3",
+        "signature": "81fb6550f17838b736cbdc6a0b4a0bde199a3d787c247df1f40cf53b61f821d2",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -686,6 +712,14 @@
         "signature": "830bd2ef560eeef83232fe0b215baaf8961c80d72708eb0c09d64f58fee27dcc",
         "affectsGlobalScope": false
       },
+<<<<<<< HEAD
+=======
+      "../src/demo/selectdemo.tsx": {
+        "version": "2c5f86b87966269ae984889778a77e968e2a097fa3eac6cac7c0d258ae300129",
+        "signature": "475875e07f34ddf0f329475aebbf87a46946486c0dbb43828ebacb3f81163ed3",
+        "affectsGlobalScope": false
+      },
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
         "signature": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -928,15 +962,22 @@
       }
     },
     "options": {
+<<<<<<< HEAD
+=======
+      "outDir": "./",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "target": 1,
       "lib": [
         "lib.dom.d.ts",
         "lib.dom.iterable.d.ts",
         "lib.esnext.d.ts"
       ],
+<<<<<<< HEAD
       "declaration": true,
       "outDir": "./",
       "module": 1,
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "allowJs": true,
       "skipLibCheck": true,
       "esModuleInterop": true,
@@ -944,12 +985,20 @@
       "strict": true,
       "forceConsistentCasingInFileNames": true,
       "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
+=======
+      "module": 99,
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "moduleResolution": 2,
       "resolveJsonModule": true,
       "isolatedModules": false,
       "jsx": 2,
       "experimentalDecorators": true,
       "sourceMap": false,
+<<<<<<< HEAD
+=======
+      "declaration": true,
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "incremental": true,
@@ -1363,7 +1412,10 @@
         "../src/demo/modaldemo.tsx",
         "../src/demo/progressdemo.tsx",
         "../src/demo/radiodemo.tsx",
+<<<<<<< HEAD
         "../src/demo/selectdemo.tsx",
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "../src/demo/tagdemo.tsx"
       ],
       "../src/components/button/button.tsx": [
@@ -1381,7 +1433,10 @@
         "../src/components/modal/modal.tsx",
         "../src/components/progress/progress.tsx",
         "../src/components/radio/radio.tsx",
+<<<<<<< HEAD
         "../src/components/select/select.tsx",
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "../src/components/tag/tag.tsx"
       ],
       "../src/components/input/input.tsx": [
@@ -1406,10 +1461,13 @@
         "../node_modules/@types/react/index.d.ts",
         "../src/react-app-env.d.ts"
       ],
+<<<<<<< HEAD
       "../src/components/select/select.tsx": [
         "../node_modules/@types/react/index.d.ts",
         "../src/react-app-env.d.ts"
       ],
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../src/components/table/table.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
@@ -1447,8 +1505,12 @@
         "../src/components/index.tsx"
       ],
       "../src/demo/selectdemo.tsx": [
+<<<<<<< HEAD
         "../node_modules/@types/react/index.d.ts",
         "../src/components/index.tsx"
+=======
+        "../node_modules/@types/react/index.d.ts"
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       ],
       "../src/demo/tagdemo.tsx": [
         "../node_modules/@types/react/index.d.ts",
@@ -1458,6 +1520,10 @@
         "../node_modules/@types/react-dom/index.d.ts",
         "../node_modules/@types/react/index.d.ts",
         "../src/app.tsx",
+<<<<<<< HEAD
+=======
+        "../src/demo/buttondemo.tsx",
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "../src/reportwebvitals.ts"
       ],
       "../src/react-app-env.d.ts": [
@@ -1879,7 +1945,10 @@
         "../src/components/modal/modal.tsx",
         "../src/components/progress/progress.tsx",
         "../src/components/radio/radio.tsx",
+<<<<<<< HEAD
         "../src/components/select/select.tsx",
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         "../src/components/tag/tag.tsx"
       ],
       "../src/components/input/input.tsx": [
@@ -1894,9 +1963,12 @@
       "../src/components/radio/radio.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
+<<<<<<< HEAD
       "../src/components/select/select.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../src/components/table/table.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
@@ -1914,6 +1986,12 @@
       "../src/demo/tagdemo.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
+<<<<<<< HEAD
+=======
+      "../src/index.tsx": [
+        "../src/demo/buttondemo.tsx"
+      ],
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../src/react-app-env.d.ts": [
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/react-dom/index.d.ts",
@@ -2049,7 +2127,10 @@
       "../src/components/progress/progress.tsx",
       "../src/components/radio/radio copy.tsx",
       "../src/components/radio/radio.tsx",
+<<<<<<< HEAD
       "../src/components/select/select.tsx",
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
       "../src/components/table/table.tsx",
       "../src/components/tag/tag.tsx",
       "../src/components/todolist/todolist.tsx",

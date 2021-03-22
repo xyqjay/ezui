@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -45,3 +46,14 @@ function SelectDemo() {
             react_1.default.createElement(Option, { Key: 'abc', value: 'abcdefghijklmnopqrstuvwxyz' }, "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"))));
 }
 exports.default = SelectDemo;
+=======
+import React from 'react';
+// import { Select, Option } from '../components/index';
+// import { Select, Option } from '../components/index';
+// const { Option } = Select;
+function SelectDemo() {
+    // console.log(Option)
+    return (React.createElement("div", null));
+}
+export default SelectDemo;
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad

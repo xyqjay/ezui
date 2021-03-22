@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "use strict";
+=======
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,6 +17,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+<<<<<<< HEAD
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -36,6 +40,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 var index_1 = require("../components/index");
+=======
+import React, { Component } from 'react';
+import { Tag } from '../components/index';
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
 // function DemoRadio() {
 //   console.log(this.refs.name)
 //   let name
@@ -59,7 +67,11 @@ var DemoRadio = /** @class */ (function (_super) {
     __extends(DemoRadio, _super);
     function DemoRadio(parameters) {
         var _this = _super.call(this, parameters) || this;
+<<<<<<< HEAD
         _this.childRef = react_1.default.createRef();
+=======
+        _this.childRef = React.createRef();
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
         console.log(_this.childRef.current);
         return _this;
     }
@@ -67,6 +79,7 @@ var DemoRadio = /** @class */ (function (_super) {
         console.log(this.childRef);
     };
     DemoRadio.prototype.render = function () {
+<<<<<<< HEAD
         return (react_1.default.createElement("div", { className: "App", style: { display: 'flex', justifyContent: "center", flexDirection: "column", alignItems: 'center' } },
             react_1.default.createElement("div", { style: { display: 'flex', flexDirection: "column" } },
                 react_1.default.createElement("div", null, "10\u3001\u6807\u7B7E"),
@@ -80,3 +93,18 @@ var DemoRadio = /** @class */ (function (_super) {
     return DemoRadio;
 }(react_1.Component));
 exports.default = DemoRadio;
+=======
+        return (React.createElement("div", { className: "App", style: { display: 'flex', justifyContent: "center", flexDirection: "column", alignItems: 'center' } },
+            React.createElement("div", { style: { display: 'flex', flexDirection: "column" } },
+                React.createElement("div", null, "10\u3001\u6807\u7B7E"),
+                React.createElement("div", { style: { display: "flex", flexDirection: "column" } },
+                    React.createElement("div", { className: "big", style: { display: "flex", alignItems: "center", flexDirection: 'column' }, onClick: function () {
+                        } },
+                        React.createElement(Tag, null, "Search"),
+                        React.createElement("div", { style: { marginBottom: '20px' } }),
+                        React.createElement(Tag, { size: 'big', style: {} }, "Search"))))));
+    };
+    return DemoRadio;
+}(Component));
+export default DemoRadio;
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad

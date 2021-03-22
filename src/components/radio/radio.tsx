@@ -21,10 +21,12 @@ function Radio({ disabled, children, className = '', style, checked }: Props,) {
     let initRadioClassName = `${Style['ez-radio']} ` + (disabled ? `${Style['ez-radio-disabled']} ` : '')
     let [radioWrapClassName, setRadioWrapClassName] = useState(initRadioWrapClassName)
     let [radioClassName, setRadioClassName] = useState(initRadioClassName);
-    let [checkedStatus, setCheckedStatus] = useState(true);
+    let [checkedStatus, setCheckedStatus] = useState(!checked);
     useEffect(() => {
-        checked && setRadioWrapClassName(initRadioWrapClassName + `${Style['ez-radio-wrapper-checked']} `);
-        checked && setRadioClassName(initRadioClassName + `${Style['ez-radio-checked']} `);
+        if(checked){
+            setRadioWrapClassName(initRadioWrapClassName + `${Style['ez-radio-wrapper-checked']} `);
+            setRadioClassName(initRadioClassName + `${Style['ez-radio-checked']} `);
+        }
     }, [checked, initRadioWrapClassName, initRadioClassName]);
     return (
         <div className={radioWrapClassName} style={style}>

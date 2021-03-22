@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -25,6 +26,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 var input_module_scss_1 = __importDefault(require("./input.module.scss"));
 var button_1 = __importDefault(require("../button/button"));
+=======
+import React, { useState } from 'react';
+import Style from './input.module.scss';
+import Button from '../button/button';
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
 // interface InputNumberProps {
 //     autoFocus?: boolean,	//	自动获取焦点	boolean	false	-
 //     bordered?: boolean,	//是否有边框	boolean	true	4.12.0
@@ -48,6 +54,7 @@ var button_1 = __importDefault(require("../button/button"));
 // }
 function Input(_a) {
     var prefix = _a.prefix, size = _a.size, value = _a.value, placeholder = _a.placeholder, warn = _a.warn, warnText = _a.warnText, label = _a.label, onChange = _a.onChange, defaultValue = _a.defaultValue, style = _a.style, _b = _a.className, className = _b === void 0 ? '' : _b;
+<<<<<<< HEAD
     var inputClassName = input_module_scss_1.default['ez-input'] + " ";
     var inputWrapClassName = input_module_scss_1.default['ez-input-affix-wrapper'] + " " + className;
     var inpuIconClassName = input_module_scss_1.default['action'] + " ";
@@ -63,11 +70,29 @@ function Input(_a) {
             break;
         case 'small':
             inputWrapClassName = inputWrapClassName + (input_module_scss_1.default['ez-input-affix-wrapper-sm'] + " ");
+=======
+    var inputClassName = Style['ez-input'] + " ";
+    var inputWrapClassName = Style['ez-input-affix-wrapper'] + " " + className;
+    var inpuIconClassName = Style['action'] + " ";
+    var inputInnerSpanClassName = Style['ez-input-prefix'] + " ";
+    var warnClassName = Style['ez-input-warn'] + " ";
+    var labelClassName = Style['ez-input-label'] + " ";
+    switch (size) {
+        case 'big':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-bg'] + " ");
+            break;
+        case 'middle':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-md'] + " ");
+            break;
+        case 'small':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-sm'] + " ");
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
             break;
         default:
             inputClassName = inputClassName + '';
             break;
     }
+<<<<<<< HEAD
     inputWrapClassName = inputWrapClassName + (warn ? input_module_scss_1.default['ez-input-affix-wrapper-warn'] + " " : '');
     return (react_1.default.createElement("span", { className: inputWrapClassName, style: style },
         label ? react_1.default.createElement("span", { className: labelClassName }, label) : '',
@@ -100,11 +125,46 @@ Input.Search = function Search(_a) {
         case 'small':
             inputWrapClassName = inputWrapClassName + (input_module_scss_1.default['ez-input-affix-wrapper-sm'] + " ");
             buttonClassName = buttonClassName + (input_module_scss_1.default['ez-input-group-addon-sm'] + " ");
+=======
+    inputWrapClassName = inputWrapClassName + (warn ? Style['ez-input-affix-wrapper-warn'] + " " : '');
+    return (React.createElement("span", { className: inputWrapClassName, style: style },
+        label ? React.createElement("span", { className: labelClassName }, label) : '',
+        prefix ?
+            React.createElement("span", { className: inputInnerSpanClassName },
+                React.createElement("span", { className: inpuIconClassName }, prefix)) : '',
+        React.createElement("input", { type: "text", className: inputClassName, value: value, defaultValue: defaultValue, placeholder: placeholder, onChange: onChange }),
+        warnText ? React.createElement("span", { className: warnClassName }, warnText) : ''));
+}
+Input.Search = function Search(_a) {
+    var prefix = _a.prefix, _b = _a.size, size = _b === void 0 ? 'middle' : _b, value = _a.value, placeholder = _a.placeholder, warn = _a.warn, warnText = _a.warnText, label = _a.label, enterButton = _a.enterButton, suffix = _a.suffix, onSearch = _a.onSearch, defaultValue = _a.defaultValue, style = _a.style, _c = _a.className, className = _c === void 0 ? '' : _c;
+    var inputClassName = Style['ez-input'] + " ";
+    var inputWrapClassName = Style['ez-input-affix-wrapper'] + " ";
+    var inpuIconClassName = Style['action'] + " ";
+    var inputInnerSpanClassName = Style['ez-input-prefix'] + " ";
+    var warnClassName = Style['ez-input-warn'] + " ";
+    var labelClassName = Style['ez-input-label'] + " ";
+    var buttonClassName = Style['ez-input-group-addon'] + " ";
+    var wrapClassName = Style['ez-input-wrapper'] + " ";
+    wrapClassName = wrapClassName + (Style['ez-input-group'] + " " + className);
+    switch (size) {
+        case 'big':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-bg'] + " ");
+            buttonClassName = buttonClassName + (Style['ez-input-group-addon-bg'] + " ");
+            break;
+        case 'middle':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-md'] + " ");
+            buttonClassName = buttonClassName + (Style['ez-input-group-addon-md'] + " ");
+            break;
+        case 'small':
+            inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper-sm'] + " ");
+            buttonClassName = buttonClassName + (Style['ez-input-group-addon-sm'] + " ");
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
             break;
         default:
             inputClassName = inputClassName + '';
             break;
     }
+<<<<<<< HEAD
     inputWrapClassName = inputWrapClassName + (warn ? input_module_scss_1.default['ez-input-affix-wrapper-warn'] + " " : '');
     inputWrapClassName = inputWrapClassName + (input_module_scss_1.default['ez-input-affix-wrapper'] + " ");
     return (react_1.default.createElement("span", { className: wrapClassName, style: style },
@@ -124,14 +184,43 @@ Input.TextArea = function TextArea(_a) {
     var textAreaWrapClassName = input_module_scss_1.default['ez-input-textArea-wrap'] + " " + className;
     textAreaWrapClassName = textAreaWrapClassName + (showCount ? input_module_scss_1.default['ez-input-textArea-wrap-showData'] + " " : '');
     var _e = react_1.useState(value ? value : defaultValue ? defaultValue : ''), valueCurrent = _e[0], setValue = _e[1];
+=======
+    inputWrapClassName = inputWrapClassName + (warn ? Style['ez-input-affix-wrapper-warn'] + " " : '');
+    inputWrapClassName = inputWrapClassName + (Style['ez-input-affix-wrapper'] + " ");
+    return (React.createElement("span", { className: wrapClassName, style: style },
+        React.createElement("span", { className: inputWrapClassName },
+            label ? React.createElement("span", { className: labelClassName }, label) : '',
+            prefix ?
+                React.createElement("span", { className: inputInnerSpanClassName },
+                    React.createElement("span", { className: inpuIconClassName }, prefix)) : '',
+            React.createElement("input", { type: "text", className: inputClassName, defaultValue: defaultValue, value: value, placeholder: placeholder }),
+            warnText ? React.createElement("span", { className: warnClassName }, warnText) : ''),
+        React.createElement("span", { className: buttonClassName },
+            React.createElement(Button, { onClick: onSearch, size: size, icon: suffix ? suffix : '', shape: 'round', type: 'primary' }, enterButton))));
+};
+Input.TextArea = function TextArea(_a) {
+    var _b = _a.cols, cols = _b === void 0 ? "40" : _b, _c = _a.rows, rows = _c === void 0 ? "4" : _c, value = _a.value, onChange = _a.onChange, defaultValue = _a.defaultValue, showCount = _a.showCount, maxLength = _a.maxLength, style = _a.style, _d = _a.className, className = _d === void 0 ? '' : _d;
+    var textAreaClassName = Style['ez-input-textArea'] + " ";
+    var textAreaWrapClassName = Style['ez-input-textArea-wrap'] + " " + className;
+    textAreaWrapClassName = textAreaWrapClassName + (showCount ? Style['ez-input-textArea-wrap-showData'] + " " : '');
+    var _e = useState(value ? value : defaultValue ? defaultValue : ''), valueCurrent = _e[0], setValue = _e[1];
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
     var change = function (e) {
         setValue(e.target.value);
         if (onChange) {
             onChange(e);
         }
     };
+<<<<<<< HEAD
     return (react_1.default.createElement("div", { className: textAreaWrapClassName, style: style, "data-count": (valueCurrent.length + '/') + (maxLength ? (maxLength + '') : '') }, valueCurrent
         ? react_1.default.createElement("textarea", { name: "", id: "", cols: parseInt(cols), value: valueCurrent, rows: parseInt(rows), className: textAreaClassName, onChange: change, maxLength: maxLength })
         : react_1.default.createElement("textarea", { name: "", id: "", cols: parseInt(cols), value: valueCurrent, rows: parseInt(rows), className: textAreaClassName, onChange: change })));
 };
 exports.default = Input;
+=======
+    return (React.createElement("div", { className: textAreaWrapClassName, style: style, "data-count": (valueCurrent.length + '/') + (maxLength ? (maxLength + '') : '') }, valueCurrent
+        ? React.createElement("textarea", { name: "", id: "", cols: parseInt(cols), value: valueCurrent, rows: parseInt(rows), className: textAreaClassName, onChange: change, maxLength: maxLength })
+        : React.createElement("textarea", { name: "", id: "", cols: parseInt(cols), value: valueCurrent, rows: parseInt(rows), className: textAreaClassName, onChange: change })));
+};
+export default Input;
+>>>>>>> 48c283a28cc05126170beca1d478b281a4c6a5ad
