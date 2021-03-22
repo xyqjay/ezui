@@ -24,7 +24,7 @@ const CheckBox = function CheckBox({ disabled, children, style, className='', ch
     let initCheckBoxClassName = `${Style['ez-checkbox']} ` + (disabled ? `${Style['ez-checkbox-disabled']} ` : '');
     let [checkboxWrapClassName, setCheckBoxWrapClassName] = useState(initCheckBoxWrapClassName)
     let [checkboxClassName, setCheckBoxClassName] = useState(initCheckBoxClassName);
-    let [checkedStatus, setCheckedStatus] = useState(true);
+    let [checkedStatus, setCheckedStatus] = useState(!checked);
     useEffect(() => {
         checked && setCheckBoxWrapClassName(initCheckBoxWrapClassName + `${Style['ez-checkbox-wrapper-checked']} `);
         checked && setCheckBoxClassName(initCheckBoxClassName + `${Style['ez-checkbox-checked']} `);

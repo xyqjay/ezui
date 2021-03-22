@@ -2,8 +2,6 @@ import React, { ReactElement, useState } from 'react';
 import Style from './input.module.scss';
 import Button from '../button/button';
 
-
-
 interface Props {
     addonAfter?: ReactElement,//	带标签的 input，设置后置标签	ReactNode	-	
     addonBefore?: ReactElement,//	带标签的 input，设置前置标签	ReactNode	-	
@@ -94,7 +92,7 @@ interface TextAreaProps {
 //     onPressEnter?: () => void,	//	按下回车的回调	function(e)	-	-
 //     onStep?: () => void,	//	点击上下箭头的回调	(value: number, info: { offset: number, type: 'up' | 'down' }) => void	-
 // }
-function Input({ prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue, style, className='' }: Props,) {
+function Input({ prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue, style, className = '' }: Props,) {
     let inputClassName = `${Style['ez-input']} `;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} ${className}`;
     let inpuIconClassName = `${Style['action']} `;
@@ -129,7 +127,7 @@ function Input({ prefix, size, value, placeholder, warn, warnText, label, onChan
         </span>
     );
 }
-Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue, style, className='' }: SearchProps,) {
+Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue, style, className = '' }: SearchProps,) {
     let inputClassName = `${Style['ez-input']} `;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} `;
     let inpuIconClassName = `${Style['action']} `;
@@ -181,7 +179,7 @@ Input.Search = function Search({ prefix, size = 'middle', value, placeholder, wa
     );
 }
 
-Input.TextArea = function TextArea({ cols = "40", rows = "4", value, onChange, defaultValue, showCount, maxLength, style, className='' }: TextAreaProps,) {
+Input.TextArea = function TextArea({ cols = "40", rows = "4", value, onChange, defaultValue, showCount, maxLength, style, className = '' }: TextAreaProps,) {
     let textAreaClassName = `${Style['ez-input-textArea']} `;
     let textAreaWrapClassName = `${Style['ez-input-textArea-wrap']} ${className}`;
     textAreaWrapClassName = textAreaWrapClassName + (showCount ? `${Style['ez-input-textArea-wrap-showData']} ` : '');
