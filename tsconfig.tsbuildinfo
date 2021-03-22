@@ -242,6 +242,7 @@
         "affectsGlobalScope": true
       },
       "./src/components/button/button.tsx": {
+<<<<<<< HEAD
         "version": "0c96309e53a57e07b0210ed0584b793dd6569febb1e6907ec958c2c89f7e888b",
         "signature": "c551118568a0d43d55e420d483fb23a308a5a3dc1b72e8b4757563e070ef2d2e",
         "affectsGlobalScope": false
@@ -308,6 +309,54 @@
       },
       "./src/app.tsx": {
         "version": "c883312127dbaca5f55a472273d2a800480215af495c9c01d1b33447c900a3fe",
+=======
+        "version": "3be4923eddf24c447abeb0de591c4854c2572b696aab8909ed96cfce829930fd",
+        "signature": "5324d6d4694619c4d842767cb3305774a617e53edbfdfaf5cd560e59d35323a8",
+        "affectsGlobalScope": false
+      },
+      "./src/components/input/input.tsx": {
+        "version": "9f8a91a62d96c4f72741b7fd886eafc97e8b4685896005591f2350de7999bb30",
+        "signature": "d00355f74a93f070dcf2a6adea6a4483a6232437fcc7e60490e956c06352e651",
+        "affectsGlobalScope": false
+      },
+      "./src/components/select/select.tsx": {
+        "version": "03d2e5b2ca1d3c28488c114961159c35f500308083985e1710cbb17ca6e9a8cc",
+        "signature": "8a25d800f444de199a415003b49a12aeb183b7498d976c252555a3a444ffb52f",
+        "affectsGlobalScope": false
+      },
+      "./src/components/select/option.tsx": {
+        "version": "03d7ef3fc134a70f90ad440c52383c32795bded4b50996477c967ca4a7e6e301",
+        "signature": "8c77aca73d8a980ad26fe8adc62a9e98a6ab372dfb2ae439226961b4f6730e4c",
+        "affectsGlobalScope": false
+      },
+      "./src/components/index.tsx": {
+        "version": "b4deba6809c8bcecd29f59dc5e9ed69f0c6bf1b7108b62a1ba29971832ec8ab2",
+        "signature": "dbbaf1fa2f68a42d976ada82f0888fa3d6381126f71dc3d4db4820ec4b482f34",
+        "affectsGlobalScope": false
+      },
+      "./src/demo/buttondemo.tsx": {
+        "version": "89edbd2c3fcf5f4dc0a2b327f4272cdcf8b841ddb6746c8a2bf6f95ed1097c9d",
+        "signature": "c04d5ddfd46ec490b2a9dd75477635f079ed438ecc7d5ef6729d273db0e44ac6",
+        "affectsGlobalScope": false
+      },
+      "./src/demo/inputdemo.tsx": {
+        "version": "878cf6913538f31c857b2dc4e6dbb3ac370dd1fe46901ccc4b096bf4a18db2a6",
+        "signature": "ebb8be156dd2403aa172d68afdecc0f94fe896a8f65e4bf8b1e5c0d7c595188e",
+        "affectsGlobalScope": false
+      },
+      "./src/demo/selectdemo.tsx": {
+        "version": "bebf59776e7d570a33c86445c05dd180f3758d1b8f89ea4d18816feafebfc7fb",
+        "signature": "475875e07f34ddf0f329475aebbf87a46946486c0dbb43828ebacb3f81163ed3",
+        "affectsGlobalScope": false
+      },
+      "./src/demo/index.tsx": {
+        "version": "7abacd0045d49f561e007ce1e542db4629f7e0959ca78395013ea1878ca89d88",
+        "signature": "2df9ea29793f764ea6a9a2c18356cfb0507bf54511977259788b04efe0bed7a3",
+        "affectsGlobalScope": false
+      },
+      "./src/app.tsx": {
+        "version": "e23018e83f0a01b42d22de4f59609917292d82aee7456f833125149aeff32a53",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "signature": "7e848b5d310adb40f89d047f3330935721152c7065fe1bd4c5792c2f3cc21ac3",
         "affectsGlobalScope": false
       },
@@ -357,8 +406,13 @@
         "affectsGlobalScope": false
       },
       "./src/index.tsx": {
+<<<<<<< HEAD
         "version": "594b737f2f9c9bacdfa459d25f7c50cde2053e4aa816b55f65ddd4c037802ca3",
         "signature": "81fb6550f17838b736cbdc6a0b4a0bde199a3d787c247df1f40cf53b61f821d2",
+=======
+        "version": "329f37211d66212c4422afcb308398d3089247dce993d7ffbcf294fd77b5a933",
+        "signature": "5e27e58e235a551ef56cb47dbd7c7f4686e88886a9cf1d8b6226833f84013fff",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/globals.d.ts": {
@@ -651,9 +705,15 @@
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": true
       },
+<<<<<<< HEAD
       "./src/components/radio/radio copy.tsx": {
         "version": "2e03ce4d10e2790ed7346a2ea35c88897f7e717c2d1f2818db026fc3afc1a0e7",
         "signature": "b4d1d2622870fc4cc55e4911b99d323a1b78bee164cdbdcae3d8ad4f1cfde018",
+=======
+      "./src/components/select/select copy1.tsx": {
+        "version": "76386135325f00946fd2a21f03f3d0d166c8f20871d9bf4b597360496d71fd11",
+        "signature": "6ca849e12fc9f29328f226d70786654f9d2e824bd078b12c59c88ed19fc62b1b",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "affectsGlobalScope": false
       },
       "./src/components/table/table.tsx": {
@@ -665,6 +725,7 @@
         "version": "2e4445d8e102487fbe9846d12fef6b8d677fabbd60aa205eb89b4cc1b25558ec",
         "signature": "9161c0b8681ae01847292438fd5dc760e4b7d29d89fa2148109892f6a0527a34",
         "affectsGlobalScope": false
+<<<<<<< HEAD
       },
       "./src/demo/inputdemo.tsx": {
         "version": "1439b0c2fd98453813d8c874dbfa9f4ffe44fe51b95c96030d4573cf11fbe131",
@@ -680,6 +741,8 @@
         "version": "2c5f86b87966269ae984889778a77e968e2a097fa3eac6cac7c0d258ae300129",
         "signature": "475875e07f34ddf0f329475aebbf87a46946486c0dbb43828ebacb3f81163ed3",
         "affectsGlobalScope": false
+=======
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       },
       "./node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -950,6 +1013,11 @@
       "incremental": true,
       "strictNullChecks": true,
       "noImplicitAny": false,
+<<<<<<< HEAD
+=======
+      "project": "./tsconfig.json",
+      "watch": true,
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
@@ -1354,15 +1422,20 @@
       ],
       "./src/app.tsx": [
         "./node_modules/@types/react/index.d.ts",
+<<<<<<< HEAD
         "./src/demo/buttondemo.tsx",
         "./src/demo/modaldemo.tsx",
         "./src/demo/progressdemo.tsx",
         "./src/demo/radiodemo.tsx",
         "./src/demo/tagdemo.tsx"
+=======
+        "./src/demo/index.tsx"
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       ],
       "./src/components/button/button.tsx": [
         "./node_modules/@types/react/index.d.ts",
         "./src/react-app-env.d.ts"
+<<<<<<< HEAD
       ],
       "./src/components/checkbox/checkbox.tsx": [
         "./node_modules/@types/react/index.d.ts",
@@ -1381,9 +1454,57 @@
         "./node_modules/@types/react/index.d.ts",
         "./src/components/button/button.tsx",
         "./src/react-app-env.d.ts"
+=======
+      ],
+      "./src/components/index.tsx": [
+        "./src/components/button/button.tsx",
+        "./src/components/input/input.tsx",
+        "./src/components/select/option.tsx",
+        "./src/components/select/select.tsx"
+      ],
+      "./src/components/input/input.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/react-app-env.d.ts"
+      ],
+      "./src/components/select/option.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/react-app-env.d.ts"
+      ],
+      "./src/components/select/select copy1.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/react-app-env.d.ts"
+      ],
+      "./src/components/select/select.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/react-app-env.d.ts"
+      ],
+      "./src/components/table/table.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/todolist/todolist.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/demo/buttondemo.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/components/index.tsx"
+      ],
+      "./src/demo/index.tsx": [
+        "./src/demo/buttondemo.tsx",
+        "./src/demo/inputdemo.tsx",
+        "./src/demo/selectdemo.tsx"
+      ],
+      "./src/demo/inputdemo.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/components/index.tsx"
+      ],
+      "./src/demo/selectdemo.tsx": [
+        "./node_modules/@types/react/index.d.ts",
+        "./src/components/index.tsx"
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       ],
       "./src/components/modal/modal.tsx": [
         "./node_modules/@types/react/index.d.ts",
+<<<<<<< HEAD
         "./src/components/button/button.tsx",
         "./src/react-app-env.d.ts"
       ],
@@ -1462,6 +1583,24 @@
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "./node_modules/@babel/types/lib/index.d.ts"
       ],
+=======
+        "./src/app.tsx",
+        "./src/reportwebvitals.ts"
+      ],
+      "./src/react-app-env.d.ts": [
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/react-dom/index.d.ts",
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/reportwebvitals.ts": [
+        "./node_modules/web-vitals/dist/modules/index.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       "./node_modules/@types/babel__core/index.d.ts": [
         "./node_modules/@babel/parser/typings/babel-parser.d.ts",
         "./node_modules/@babel/types/lib/index.d.ts",
@@ -1863,16 +2002,23 @@
       ],
       "./src/components/index.tsx": [
         "./src/components/button/button.tsx",
+<<<<<<< HEAD
         "./src/components/checkbox/checkbox.tsx",
         "./src/components/input/input.tsx",
         "./src/components/modal/modal.tsx",
         "./src/components/progress/progress.tsx",
         "./src/components/radio/radio.tsx",
         "./src/components/tag/tag.tsx"
+=======
+        "./src/components/input/input.tsx",
+        "./src/components/select/option.tsx",
+        "./src/components/select/select.tsx"
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       ],
       "./src/components/input/input.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
+<<<<<<< HEAD
       "./src/components/modal/modal.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
@@ -1880,20 +2026,33 @@
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/components/radio/radio.tsx": [
+=======
+      "./src/components/select/option.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/select/select copy1.tsx": [
+        "./node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/select/select.tsx": [
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/components/table/table.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
+<<<<<<< HEAD
       "./src/components/tag/tag.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
+=======
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       "./src/components/todolist/todolist.tsx": [
         "./node_modules/@types/react/index.d.ts"
       ],
       "./src/demo/index.tsx": [
         "./src/demo/buttondemo.tsx",
         "./src/demo/inputdemo.tsx",
+<<<<<<< HEAD
         "./src/demo/progressdemo.tsx"
       ],
       "./src/demo/tagdemo.tsx": [
@@ -1901,6 +2060,9 @@
       ],
       "./src/index.tsx": [
         "./src/demo/buttondemo.tsx"
+=======
+        "./src/demo/selectdemo.tsx"
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       ],
       "./src/react-app-env.d.ts": [
         "./node_modules/@types/node/index.d.ts",
@@ -2074,6 +2236,7 @@
       "./src/app.tsx",
       "./src/asset/iconfont/iconfont.js",
       "./src/components/button/button.tsx",
+<<<<<<< HEAD
       "./src/components/checkbox/checkbox.tsx",
       "./src/components/index.tsx",
       "./src/components/input/input.tsx",
@@ -2083,15 +2246,27 @@
       "./src/components/radio/radio.tsx",
       "./src/components/table/table.tsx",
       "./src/components/tag/tag.tsx",
+=======
+      "./src/components/index.tsx",
+      "./src/components/input/input.tsx",
+      "./src/components/select/option.tsx",
+      "./src/components/select/select copy1.tsx",
+      "./src/components/select/select.tsx",
+      "./src/components/table/table.tsx",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       "./src/components/todolist/todolist.tsx",
       "./src/demo/buttondemo.tsx",
       "./src/demo/index.tsx",
       "./src/demo/inputdemo.tsx",
+<<<<<<< HEAD
       "./src/demo/modaldemo.tsx",
       "./src/demo/progressdemo.tsx",
       "./src/demo/radiodemo.tsx",
       "./src/demo/selectdemo.tsx",
       "./src/demo/tagdemo.tsx",
+=======
+      "./src/demo/selectdemo.tsx",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
       "./src/index.tsx",
       "./src/react-app-env.d.ts",
       "./src/reportwebvitals.ts",
@@ -2699,6 +2874,7 @@
         1
       ],
       [
+<<<<<<< HEAD
         "./src/components/modal/modal.tsx",
         1
       ],
@@ -2712,6 +2888,17 @@
       ],
       [
         "./src/components/radio/radio.tsx",
+=======
+        "./src/components/select/option.tsx",
+        1
+      ],
+      [
+        "./src/components/select/select copy1.tsx",
+        1
+      ],
+      [
+        "./src/components/select/select.tsx",
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         1
       ],
       [
@@ -2719,10 +2906,13 @@
         1
       ],
       [
+<<<<<<< HEAD
         "./src/components/tag/tag.tsx",
         1
       ],
       [
+=======
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "./src/components/todolist/todolist.tsx",
         1
       ],
@@ -2739,6 +2929,7 @@
         1
       ],
       [
+<<<<<<< HEAD
         "./src/demo/modaldemo.tsx",
         1
       ],
@@ -2751,14 +2942,19 @@
         1
       ],
       [
+=======
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "./src/demo/selectdemo.tsx",
         1
       ],
       [
+<<<<<<< HEAD
         "./src/demo/tagdemo.tsx",
         1
       ],
       [
+=======
+>>>>>>> cfc044f524450ad2c74a00bc90d8970daa691fdb
         "./src/index.tsx",
         1
       ],
@@ -2772,6 +2968,34 @@
       ],
       [
         "./src/setuptests.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2016.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2018.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2019.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2020.d.ts",
+        1
+      ],
+      [
+        "../../../../usr/local/lib/node_modules/typescript/lib/lib.esnext.d.ts",
         1
       ]
     ]

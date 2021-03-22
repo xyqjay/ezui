@@ -5,7 +5,8 @@ import DemoModal from './demo/modalDemo';
 import DemoRadio from './demo/radioDemo';
 import DemoProgress from './demo/progressDemo';
 import DemoTag from './demo/tagDemo';
-  
+import DemoSelect from './demo/selectDemo';
+
 function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -19,6 +20,8 @@ function App() {
       <DemoProgress></DemoProgress>
       <div style={{ marginBottom: '60px' }}></div>
       <DemoTag></DemoTag>
+      <div style={{ marginBottom: '60px' }}></div>
+      <DemoSelect></DemoSelect>
     </div>
   );
 }

@@ -1,0 +1,153 @@
+.ez-select{
+    height:40px;
+    width:200px;
+    border-radius: 4px;
+    position:relative;
+    margin:auto;
+    background: getFontColor(0.03);
+    cursor: pointer;
+    .ez-select-input{
+        height:100%;
+        width:100%;
+        outline: none;
+        border: none;
+        padding:13px 28px 13px 12px;
+        box-sizing: border-box;
+        background:transparent;
+        caret-color: transparent;/* 让input不显示光标 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        position: absolute;
+        left:0;
+        z-index:10;
+    }
+    .ez-option-wrap-block-extend{
+        max-height: 320px;
+        visibility: visible;
+        height:auto;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        width:100%;
+        position:absolute;
+        padding:4px 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        animation: visible 0.2s ease-in;
+        z-index: 999;
+        border-radius: 8px;
+
+    }
+    .ez-option-wrap-block{
+        @extend .ez-option-wrap-block-extend;
+        top:44px;
+        &::-webkit-scrollbar {
+            /*隐藏滚动条*/
+            display: none;
+        }
+    }
+    .ez-option-wrap-block-top{
+        @extend .ez-option-wrap-block-extend;
+        top:-332px;
+        &::-webkit-scrollbar {
+            /*隐藏滚动条*/
+            display: none;
+        }
+    }
+    @keyframes visible {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .ez-option-wrap-hidden{
+        visibility: hidden;
+    }
+    .icon{
+        position:absolute;
+        right:12px;
+        top:12px;
+        z-index:1;
+    }
+}
+.ez-select-large{
+    width:242px;
+    height:48px;
+    .icon{
+        top:16px;
+    }
+    .ez-option-wrap-block{
+        max-height: 384px;
+        top:56px;
+        padding:8px 0;
+    }
+    .ez-option-wrap-block-top{
+        max-height: 384px;
+        top:-408px;
+        padding:8px 0;
+    }
+}
+.ez-select-disabled{
+    cursor: no-drop !important;
+}
+
+// ------ Option -------
+.ez-option{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 40px;
+}
+.ez-option-child{
+    width:100%;
+    line-height: 40px;
+    height:40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $fontColor;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    padding-left:18px;
+    box-sizing: border-box;
+    &:hover{
+        background: getThemeColor(0.1);
+        font-weight: 500;
+    }
+}
+.ez-option-child-choose{
+    width:100%;
+    line-height: 40px;
+    height:40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $fontColor;
+    text-align: left;
+    padding-left:18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-left:2px solid $themeColorClass_2;
+    background: #FFFBEB;
+}
+.ez-option-child-large{
+    line-height: 48px;
+    height:48px;
+}
+.ez-option-icon{
+    margin-right:10px;
+}
+.ez-input-placeholder{
+    font-size: 14px;
+    font-family: Montserrat-Regular, Montserrat;
+    font-weight: 400;
+    color: getFontColor(0.24);
+}
+/* WebKit, Blink, Edge , Mozilla Firefox 4 to 18 , Mozilla Firefox 19+ , Internet Explorer 10-11 */
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+    @extend .ez-input-placeholder;
+}
