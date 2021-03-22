@@ -2,6 +2,7 @@
   "name": "eaui",
   "version": "0.1.0",
   "private": true,
+  "main": "index.tsx",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -33,7 +34,6 @@
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "6.1.1",
@@ -78,13 +78,25 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "build-css": "node-sass",
+    "_注释": "//使用 node-sass 编译 SCSS，抽取所有 SCSS 文件生成 CSS 文件"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "_注释": "//使用 eslint-plugin-react-hooks 插件 exhaustive-deps 配置项 检测 hooks 编写错误",
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "_注释1": "// 检查 Hook 的规则",
+      "react-hooks/rules-of-hooks": "error",
+      "_注释2": "// 检查 effect 的依赖",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -153,5 +165,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

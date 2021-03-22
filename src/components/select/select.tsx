@@ -27,11 +27,11 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
         selectClass = selectClass + ' ' + Style['ez-select-disabled'];
         inputClass = inputClass + ' ' + Style['ez-select-disabled'];
     }
-    const selectRef: any = useRef();
-    const optionRef: any = useRef();
+    const selectRef: any = useRef(null);
+    const optionRef: any = useRef(null);
     let optionWrapBottom: number;
     useEffect(()=>{
-        optionWrapBottom = selectRef.current.getBoundingClientRect().bottom + 4 + optionRef.current.offsetHeight;
+        optionWrapBottom = selectRef.current.getBoundingClientRect().bottom + 6 + optionRef.current.offsetHeight;
         // console.log(selectRef.current.getBoundingClientRect().bottom, optionRef.current.getBoundingClientRect().height);
         // console.log(optionRef.current.offsetHeight,optionRef.current.getBoundingClientRect().height)
     })
@@ -43,7 +43,7 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
             setezOptionWrapClass(Style['ez-option-wrap-hidden']);
             return;
         }
-        if(window.innerHeight - optionWrapBottom < 0 && (selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 4 || selectRef.current.getBoundingClientRect().top > window.innerHeight - selectRef.current.getBoundingClientRect().bottom )){
+        if(window.innerHeight - optionWrapBottom < 0 && (selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 6 || selectRef.current.getBoundingClientRect().top > window.innerHeight - selectRef.current.getBoundingClientRect().bottom )){
             bool ? setezOptionWrapClass(Style['ez-option-wrap-block-top']) : setezOptionWrapClass(Style['ez-option-wrap-hidden']);
             optionWrapBottom = optionRef.current.getBoundingClientRect().bottom;
             // console.log('---click if---',window.innerHeight , optionWrapBottom)
@@ -72,7 +72,7 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
             setezOptionWrapClass(Style['ez-option-wrap-hidden'])
             return;
         }
-        if(window.innerHeight - optionWrapBottom < 0 && (selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 4 || selectRef.current.getBoundingClientRect().top > window.innerHeight - selectRef.current.getBoundingClientRect().bottom )){
+        if(window.innerHeight - optionWrapBottom < 0 && (selectRef.current.getBoundingClientRect().top > optionRef.current.getBoundingClientRect().height + 6 || selectRef.current.getBoundingClientRect().top > window.innerHeight - selectRef.current.getBoundingClientRect().bottom )){
             setezOptionWrapClass(Style['ez-option-wrap-block-top']);
             optionWrapBottom = optionRef.current.getBoundingClientRect().bottom;
             // console.log('---focus if---',window.innerHeight , optionWrapBottom)
