@@ -11,7 +11,7 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <DemoButton></DemoButton>
-      <DemoInput></DemoInput> 
+      <DemoInput></DemoInput>
       <div style={{ marginBottom: '60px' }}></div>
       <DemoModal></DemoModal>
       <div style={{ marginBottom: '60px' }}></div>
