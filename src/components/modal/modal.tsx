@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Style from './modal.module.scss';
+import Style from './modal.module.less';
 import Button from '../button/button';
 
 interface Props {

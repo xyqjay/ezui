@@ -1,22 +1,19 @@
-.ez-radio-wrapper {
+.ez-checkbox-wrapper {
     display: flex;
-
-    .label {
+    .label{
         margin-left: 4px;
     }
-
-    .ez-radio {
+    .ez-checkbox {
         position: relative;
         width: 16px;
         height: 16px;
         border: 1px solid getFontColor(0.4);
-        border-radius: 50%;
+        // border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-sizing: border-box;
 
-        .ez-radio-input {
+        .ez-checkbox-input {
             position: absolute;
             top: -5px;
             right: 0;
@@ -30,30 +27,29 @@
         }
     }
 
-    .ez-radio:hover {
-        background: $themeColorClass_4;
-        border: 1px solid $themeColorClass_2;
+    .ez-checkbox:hover {
+        background:g@themeColorClass_3;
+        border: 1px solid @themeColorClass_2;
     }
 }
 
-.ez-radio-wrapper.ez-radio-wrapper-disabled {
-    .ez-radio.ez-radio-disabled:hover {
+.ez-checkbox-wrapper.ez-checkbox-wrapper-disabled {
+    .ez-checkbox.ez-checkbox-disabled:hover{
         background: getFontColor(0.06);
         border: 1px solid getFontColor(0.16);
     }
-
-    .ez-radio.ez-radio-disabled {
+    .ez-checkbox.ez-checkbox-disabled {
         position: relative;
         width: 16px;
         height: 16px;
-        border-radius: 50%;
+        // border-radius: 50%;
         background: getFontColor(0.06);
         border: 1px solid getFontColor(0.16);
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .ez-radio-input {
+        .ez-checkbox-input {
             position: absolute;
             top: 0;
             right: 0;
@@ -65,59 +61,68 @@
         }
     }
 
-    .ez-radio:hover {
-        background: $themeColorClass_4;
-        border: 1px solid $themeColorClass_2;
+    .ez-checkbox:hover {
+        background: @themeColorClass_4;
+        border: 1px solid @themeColorClass_2;
     }
 }
 
-.ez-radio-wrapper-checked {
-    .ez-radio-checked {
+.ez-checkbox-wrapper-checked {
+    .ez-checkbox-checked {
         position: relative;
         width: 16px;
         height: 16px;
-        border-radius: 50%;
+        // border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        background: $themeColorClass_4;
-        border: 1px solid $themeColorClass_2;
+        background: @themeColorClass_2;
+        border: 1px solid @themeColorClass_2;
 
-        .ez-radio-inner {
+        .ez-checkbox-inner {
             width: 10px;
             height: 10px;
-            border-radius: 50%;
+            // border-radius: 50%;
             background: #FFDA3F;
         }
     }
-}
-
-.ez-radio-wrapper.ez-radio-wrapper-disabled.ez-radio-wrapper-checked {
-    .ez-radio.ez-radio-disabled:hover {
-        background: getFontColor(0.06);
-        border: 1px solid getFontColor(0.16);
-    }
-
-    .ez-radio.ez-radio-disabled {
+    .ez-checkbox-checked:hover {
         position: relative;
         width: 16px;
         height: 16px;
-        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: @themeColorClass_2;
+        border: 1px solid @themeColorClass_2;
+    }
+}
+
+.ez-checkbox-wrapper.ez-checkbox-wrapper-disabled.ez-checkbox-wrapper-checked {
+    .ez-checkbox.ez-checkbox-disabled:hover{
+        background: getFontColor(0.06);
+        border: 1px solid getFontColor(0.16);
+    }
+    .ez-checkbox.ez-checkbox-disabled {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        // border-radius: 50%;
         background: getFontColor(0.06);
         border: 1px solid getFontColor(0.16);
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .ez-radio-inner {
+        .ez-checkbox-inner {
             width: 10px;
             height: 10px;
-            border-radius: 50%;
+            // border-radius: 50%;
             background: getFontColor(0.16);
         }
 
-        .ez-radio-input {
+        .ez-checkbox-input {
             position: absolute;
             top: 0;
             right: 0;
@@ -129,8 +134,8 @@
         }
     }
 
-    .ez-radio:hover {
-        background: $themeColorClass_4;
-        border: 1px solid $themeColorClass_2;
+    .ez-checkbox:hover {
+        background: @themeColorClass_4;
+        border: 1px solid @themeColorClass_2;
     }
 }

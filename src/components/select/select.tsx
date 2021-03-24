@@ -1,5 +1,5 @@
 import React, { ReactElement, useRef, useState, useEffect } from 'react';
-import Style from './select.module.scss';
+import Style from './select.module.less';
 
 interface Props {
     onClick?: () => void,
@@ -55,14 +55,14 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
         onClick && onClick();
         inputRef.current.focus();
     }
-    function optionClick(e,Key?: string | number,value?: string | number){
+    function optionClick(e: any,Key?: string | number,value?: string | number){
         e.stopPropagation();
         e.persist();
         setezOptionWrapClass(Style['ez-option-wrap-hidden']);
         onChange && onChange(Key,value);
         inputRef.current.blur();
     }
-    function blur(e) {
+    function blur(e: any) {
         e.persist();
         setezOptionWrapClass(Style['ez-option-wrap-hidden']);
         bool = true;
@@ -84,7 +84,7 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
     const [optionValue, setOptionValue] = useState('');
     return (
         <div ref={selectRef} className={selectClass} onClick={click}>
-            <input ref={inputRef} className={inputClass} placeholder={placeholder} value={optionValue} onBlur={blur} onFocus={focus} onChange={() => { }} />
+            <input ref={inputRef} className={inputClass} placeholder={placeholder} value={optionValue} onBlur={blur} onFocus={focus} onChange={()=>{}} />
             <span className={Style.icon}>
                 <svg className='icon' aria-hidden='true'>
                     <use xlinkHref='#iconicon_placeholder'></use>
@@ -94,12 +94,12 @@ const Select = ({ children, placeholder, onClick, onChange, size, disabled }: Pr
                 {(ezOptionWrapClass === Style['ez-option-wrap-block'] || ezOptionWrapClass === Style['ez-option-wrap-block-top']) && Array.isArray(children) && children.length > 0 ? children.map(function(item,index){
                     if(item.props.value === optionValue){
                         return <div key={index} className={optionChooseClass} onClick={(e)=>{
-                            setOptionValue(item.props.value);
+                            item.props.value ? setOptionValue(item.props.value) : setOptionValue(item.props.children);
                             optionClick(e,item.props.Key,item.props.value);
                         }}>{item}</div>
                     }
                     return <div key={index} className={optionClass} onClick={(e)=>{
-                        setOptionValue(item.props.value);
+                        item.props.value ? setOptionValue(item.props.value) : setOptionValue(item.props.children);
                         optionClick(e,item.props.Key,item.props.value);
                     }}>{item}</div>
                 }) : children}

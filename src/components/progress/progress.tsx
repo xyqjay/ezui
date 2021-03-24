@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import Style from './progress.module.scss';
+import Style from './progress.module.less';
 
 interface Props {
     format?: () => void,//	内容的模板函数	function(percent, successPercent)	(percent) => percent + %

@@ -8,4 +8,3 @@ export { default as Radio } from './radio/radio';
 export { default as CheckBox } from './checkbox/checkbox';
 export { default as Progress } from './progress/progress';
 export { default as Tag } from './tag/tag';
-
