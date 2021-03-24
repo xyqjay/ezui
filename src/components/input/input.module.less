@@ -1,12 +1,13 @@
 .ez-input-affix-wrapper {
+    box-sizing: content-box;
     position: relative;
     display: flex;
     align-items: center;
-    background: getFontColor(0.03);
-    border: 1px solid getFontColor(0.03);
+    background: transparent;
+    border: 1px solid transparent;
 
     .ez-input {
-        border: none;
+        border: 1px solid transparent;
         background: transparent;
     }
 }
@@ -63,11 +64,11 @@
 }
 
 .ez-input-affix-wrapper:hover {
-    border: 1px solid $themeColorClass_2;
+    border: 1px solid @themeColorClass_2;
 }
 
 .ez-input-affix-wrapper.ez-input-affix-wrapper-warn:hover {
-    border: 1px solid $warnColor;
+    border: 1px solid @warnColor;
 }
 
 .ez-input:focus,
@@ -77,16 +78,16 @@
 .ez-input:active.focus,
 .ez-input.active.focus {
     outline: none;
-    border-color: transparent; // 若是本身具有 border 请删除此属性
+    border: 1px solid transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
 }
 
 .ez-input-affix-wrapper:focus {
-    border: none;
+    border: 1px solid transparent;
 }
 
 .ez-input-affix-wrapper-warn {
-    border: 1px solid $warnColor;
+    border: 1px solid @warnColor;
 }
 
 .ez-input {
@@ -95,23 +96,23 @@
     font-size: 14px;
     font-family: Montserrat-Regular, Montserrat;
     font-weight: 400;
-    color: $fontColor;
+    color: @fontColor;
     line-height: 14px;
-    caret-color: $themeColorClass_2;
+    caret-color: @themeColorClass_2;
 }
 
 .ez-input-warn {
     position: absolute;
     top: 100%;
     left: 0;
-    color: $warnColor;
+    color: @warnColor;
 }
 
 .ez-input-label {
     position: absolute;
     top: -50%;
     left: 0;
-    color: $fontColor;
+    color: @fontColor;
 }
 
 
@@ -159,16 +160,16 @@
     font-size: 14px;
     font-family: Montserrat-Regular, Montserrat;
     font-weight: 400;
-    color: $fontColor;
+    color: @fontColor;
     line-height: 22px;
-    caret-color: $themeColorClass_2;
+    caret-color: @themeColorClass_2;
     background: getFontColor(0.03);
     border-radius: 4px;
     border-color:transparent;
 }
 
 .ez-input-textArea:hover {
-    border: 1px solid $themeColorClass_2;
+    border: 1px solid @themeColorClass_2;
 }
 
 .ez-input-textArea:focus,
@@ -180,7 +181,7 @@
     outline: none;
     border-color: transparent; // 若是本身具有 border 请删除此属性
     box-shadow: none;
-    border: 1px solid $themeColorClass_2;
+    border: 1px solid @themeColorClass_2;
 }
 
 .ez-input-textArea-wrap {

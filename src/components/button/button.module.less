@@ -7,36 +7,36 @@ a {
     justify-content: center;
     align-items: center;
     background: #ffffff;
-    border: $buttonBorderWidth solid $themeColorClass_4;
+    border: @buttonBorderWidth solid @themeColorClass_4;
     font-weight: 500;
 }
 
 
 .ez-btn:hover {
-    background: $themeColorClass_3;
-    border-color: $themeColorClass_2;
+    background: @themeColorClass_3;
+    border-color: @themeColorClass_2;
 }
 .ez-btn.ez-btn-default:hover {
-    background: $themeColorClass_2;
-    border-color: $themeColorClass_2;
-    color: $fontColor;
+    background: @themeColorClass_2;
+    border-color: @themeColorClass_2;
+    color: @fontColor;
 }
 .ez-btn.ez-btn-dashed:hover {
     background: #ffffff;
-    border-color: $themeColorClass_2;
-    color: $themeColorClass_2;
+    border-color: @themeColorClass_2;
+    color: @themeColorClass_2;
 }
 
 .ez-btn.ez-btn-primary:hover {
-    background: $themeColorClass_3;
+    background: @themeColorClass_3;
     box-shadow: 0px 6px 10px 0px getFontColor(0.12);
-    border-color: $themeColorClass_3;
+    border-color: @themeColorClass_3;
 }
 
 .ez-btn.ez-btn-text:hover {
     background: #ffffff;
     border: none;
-    color: $themeColorClass_2;
+    color: @themeColorClass_2;
     font-family: Montserrat-Medium, Montserrat;
 }
 
@@ -48,8 +48,8 @@ a {
 .ez-btn.active.focus {
     outline: none;
     box-shadow: none;
-    background: $themeColorClass_1;
-    border-color: $themeColorClass_4;
+    background: @themeColorClass_1;
+    border-color: @themeColorClass_4;
 }
 .ez-btn.ez-btn-default:focus,
 .ez-btn.ez-btn-default:active:focus,
@@ -59,9 +59,9 @@ a {
 .ez-btn.ez-btn-default.active.focus {
     outline: none;
     box-shadow: none;
-    background: $themeColorClass_1;
-    border-color: $themeColorClass_1;
-    color:$fontColor;
+    background: @themeColorClass_1;
+    border-color: @themeColorClass_1;
+    color:@fontColor;
 }
 .ez-btn.ez-btn-dashed:focus,
 .ez-btn.ez-btn-dashed:active:focus,
@@ -72,8 +72,8 @@ a {
     outline: none;
     box-shadow: none;
     background:#ffffff;
-    border-color: $themeColorClass_1;
-    color:$themeColorClass_1;
+    border-color: @themeColorClass_1;
+    color:@themeColorClass_1;
 }
 .ez-btn.ez-btn-primary:focus,
 .ez-btn.ez-btn-primary:active:focus,
@@ -83,8 +83,8 @@ a {
 .ez-btn.ez-btn-primary.active.focus {
     outline: none;
     box-shadow: none;
-    background: $themeColorClass_1;
-    border-color: $themeColorClass_1;
+    background: @themeColorClass_1;
+    border-color: @themeColorClass_1;
 }
 
 .ez-btn.ez-btn-text:focus,
@@ -97,8 +97,8 @@ a {
     box-shadow: none;
     font-family: Montserrat-Medium, Montserrat;
     // font-weight: 500;
-    color: $themeColorClass_1;
-    background: #ffffff;
+    color: @themeColorClass_1;
+    background: transparent;
     border: none;
 }
 
@@ -110,12 +110,13 @@ a {
 .ez-btn.ez-btn-link.active.focus {
     outline: none;
     box-shadow: none;
-    color: $themeColorClass_4;
-    background: #ffffff;
+    color: @themeColorClass_4;
+    background: transparent;
     border: none;
 }
 .ez-btn-bg {
-    padding: 17px 32px;
+    height: 48px;
+    width: 120px;
 
     .ezicon {
         width: 16px;
@@ -129,7 +130,9 @@ a {
 }
 
 .ez-btn-md {
-    padding: 13px 32px;
+    // padding: 0 24px;
+    height: 40px;
+    width: 120px;
 
     .ezicon {
         width: 12px;
@@ -143,7 +146,8 @@ a {
 }
 
 .ez-btn-sm {
-    padding: 9px 24px;
+    width: 104px;
+    height: 32px;
 
     .ezicon {
         width: 12px;
@@ -173,56 +177,56 @@ a {
 }
 
 .ez-btn-bg.ez-btn-circle {
-    border-radius: $borderCircleRadiusBig;
+    border-radius: @borderCircleRadiusBig;
 
 }
 
 .ez-btn-md.ez-btn-circle {
-    border-radius: $borderCircleRadiusMiddle;
+    border-radius: @borderCircleRadiusMiddle;
 }
 
 .ez-btn-sm.ez-btn-circle {
-    border-radius: $borderCircleRadiusSmall;
+    border-radius: @borderCircleRadiusSmall;
 }
 
 .ez-btn-bg.ez-btn-round {
-    border-radius: $borderRoundRadiusBig;
+    border-radius: @borderRoundRadiusBig;
 }
 
 .ez-btn-md.ez-btn-round {
-    border-radius: $borderRoundRadiusMiddle;
+    border-radius: @borderRoundRadiusMiddle;
 }
 
 .ez-btn-sm.ez-btn-round {
-    border-radius: $borderRoundRadiusSmall;
+    border-radius: @borderRoundRadiusSmall;
 }
 
 .ez-btn.ez-btn-primary {
-    background: $themeColorClass_2;
-    border-color: $themeColorClass_2;
+    background: @themeColorClass_2;
+    border-color: @themeColorClass_2;
 }
 .ez-btn.ez-btn-default {
     background: #ffffff;
-    border-color: $themeColorClass_2;
-    color:$themeColorClass_2;
+    border-color: @themeColorClass_2;
+    color:@themeColorClass_2;
 }
 .ez-btn.ez-btn-dashed {
     background: #ffffff;
     border-color: getFontColor(0.08);
-    color:$fontColor;
+    color:@fontColor;
 }
 .ez-btn.ez-btn-text {
     border: none;
     background: #ffffff;
-    color: $ButtonTextColor;
+    color: @ButtonTextColor;
     font-weight: 400;
     font-family: Montserrat-Regular, Montserrat;
 }
 
 .ez-btn.ez-btn-link {
     border: none;
-    background: #ffffff;
-    color: $ButtonLinkColor;
+    background: transparent;
+    color: @ButtonLinkColor;
 }
 
 .ez-btn.ez-btn-disabled {
