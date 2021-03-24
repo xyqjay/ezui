@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Style from './tag.module.scss';
+import Style from './tag.module.less';
 
 interface Props {
     closable?: boolean,//		标签是否可以关闭	boolean	false	

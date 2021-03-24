@@ -19,7 +19,7 @@
     "moduleResolution": "node", // 使用 Node.js 风格解析模块 node/classic（node模式 文件直接在node_modules文件夹里查找；classic模式 文件优先到外层文件夹查找，如果没有找到则再去node_modules文件夹下查找）
     "resolveJsonModule": true, // 允许使用 .json 扩展名导入的模块
     "isolatedModules": false, // 执行其他检查，以确保单独的编译（例如withtranspileModule或@ babel / plugin-transform-typescript）是安全的。
-    // "noEmit": true, // 不输出(意思是不编译代码，只执行类型检查)
+    "noEmit": true, // 不输出(意思是不编译代码，只执行类型检查)
     "jsx": "react", // 在.tsx文件中支持JSX
 
     "experimentalDecorators": true, //允许装饰器模式

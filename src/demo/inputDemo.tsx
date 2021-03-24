@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from '../components/index';
 
 const { Search } = Input;
 const { TextArea } = Input;
 
 function DemoInput() {
+    let [input1,setInput]=useState('1111');
     return (
         <div className="App" style={{ display: 'flex', flexDirection: "column", alignItems: 'center' }}>
             <div>1.1输入尺寸</div>
@@ -15,6 +16,10 @@ function DemoInput() {
                         prefix={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
                         placeholder='Input text'
                         style={{ margin: '30px' }}
+                        value={input1}
+                        onChange={(e)=>{
+                            setInput(e.target.value)
+                        }}
                     ></Input>
                     <Input
                         size='big'

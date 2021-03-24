@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Style from './checkbox.module.scss';
+import Style from './checkbox.module.less';
 
 interface Props {
     buttonStyle?: string,//RadioButton 的风格样式，目前有描边和填色两种风格	outline | solid	outline		

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Style from './modal.module.scss';
+import Style from './modal.module.less';
 import Button from '../button/button';
 
 interface Props {
@@ -48,13 +48,13 @@ function Modal({
     children,
     footer,
     okType = 'primary',
-    okText = <span>submit </span>,
+    okText,
     cancelText,
     cancelType = '',
-    width,
     centered = false,
     style,
-    className = ''
+    className = '',
+    closeIcon
 }: Props,) {
     let modalContentClassName = `${Style['ez-modal-content']} `;
     modalContentClassName = modalContentClassName + (centered ? `${Style['ez-modal-content-center']} ` : '')
@@ -75,12 +75,13 @@ function Modal({
             break;
     }
     return (
-        <div className={`${className} ${Style['ez-modal-mask']}`} style={style}>
+        <div className={`${className} ${Style['ez-modal-mask']}`} >
             <div className={Style['ez-modal-wrap']}>
-                <div className={modalContentClassName} style={{ margin: 0, width }}>
+                <div className={modalContentClassName} style={style}>
                     <Button onClick={onCancel}
+                        type='text'
                         size={size}
-                        icon={<img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
+                        icon={closeIcon ? closeIcon : <img src='https://cdn.lumiclass.com/cms/qm/2021/01/25/48a45eaf-9ae7-42b8-8d7b-96e83ea4030a.png' alt="" />}
                         shape='round'
                         className={`${Style['ez-modal-close']} `}
                     ></Button>
@@ -97,12 +98,12 @@ function Modal({
                                 shape='round'
                                 type={cancelType}
                             >{cancelText}</Button> : ''}
-                            <Button
+                            {okText ? <Button
                                 onClick={onOk}
                                 size='middle'
                                 shape='round'
                                 type={okType}
-                            >{okText}</Button>
+                            >{okText}</Button> : ''}
                         </div>}
                 </div>
             </div>
@@ -125,7 +126,7 @@ Modal.Popover = function Popover({
     centered = false,
     placement = 'bottom',
     style,
-    className=''
+    className = ''
 }: Props,) {
     let modalContentClassName = `${Style['ez-modal-content']} `;
     modalContentClassName = modalContentClassName + (centered ? `${Style['ez-modal-content-center']} ` : '')
@@ -148,7 +149,7 @@ Modal.Popover = function Popover({
     }
     modalTrangleClassName = modalTrangleClassName + `${Style['ez-modal-trangle-' + placement]} `;
     return (
-        <div className={`${Style['ez-modal-mask']} ` + className}style={style}>
+        <div className={`${Style['ez-modal-mask']} ` + className} style={style}>
             <div className={`${Style['ez-modal-wrap']} `}>
                 <div className={modalContentClassName} style={{ width }}>
                     <div className={modalTrangleClassName}></div>

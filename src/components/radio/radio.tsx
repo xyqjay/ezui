@@ -1,5 +1,5 @@
 import React, { useState, ReactElement, useEffect } from 'react';
-import Style from './radio.module.scss';
+import Style from './radio.module.less';
 
 interface Props {
     buttonStyle?: string,//RadioButton 的风格样式，目前有描边和填色两种风格	outline | solid	outline		

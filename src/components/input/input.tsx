@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import Style from './input.module.scss';
+import Style from './input.module.less';
 import Button from '../button/button';
 
 interface Props {
@@ -20,7 +20,7 @@ interface Props {
     warn?: boolean,	//是否是warn状态
     warnText?: string,	//是否是warn状态
     label?: string,	//是否是warn状态
-    onChange?: () => void,//	输入框内容变化时的回调	function(e)	-	
+    onChange?: (e) => void,//	输入框内容变化时的回调	function(e)	-	
     onPressEnter?: () => void,//
     style?: object,
     className?: string
@@ -102,7 +102,6 @@ function Input({ prefix, size, value, placeholder, warn, warnText, label, onChan
     switch (size) {
         case 'big':
             inputWrapClassName = inputWrapClassName + `${Style['ez-input-affix-wrapper-bg']} `;
-
             break;
         case 'middle':
             inputWrapClassName = inputWrapClassName + `${Style['ez-input-affix-wrapper-md']} `;

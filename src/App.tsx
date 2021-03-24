@@ -1,6 +1,6 @@
 import React from 'react';
 import DemoButton from './demo/buttonDemo';
-// import DemoInput from './demo/inputDemo';
+import DemoInput from './demo/inputDemo';
 import DemoModal from './demo/modalDemo';
 import DemoRadio from './demo/radioDemo';
 import DemoProgress from './demo/progressDemo';
@@ -11,7 +11,7 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <DemoButton></DemoButton>
-      {/* <DemoInput></DemoInput>  */}
+      <DemoInput></DemoInput> 
       <div style={{ marginBottom: '60px' }}></div>
       <DemoModal></DemoModal>
       <div style={{ marginBottom: '60px' }}></div>

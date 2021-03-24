@@ -16,7 +16,7 @@ function DemoRadio() {
             <Radio disabled={true} checked>option4</Radio>
           </div>
         </div>
-      </div>
+      </div> 
       <div style={{ display: 'flex', flexDirection: "column" }}>
         <div>多项选择</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
