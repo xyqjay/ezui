@@ -23,7 +23,8 @@ interface Props {
     onChange?: (e) => void,//	输入框内容变化时的回调	function(e)	-	
     onPressEnter?: () => void,//
     style?: object,
-    className?: string
+    className?: string,
+    right?: boolean,
 }
 
 interface SearchProps {
@@ -50,7 +51,8 @@ interface SearchProps {
     loading?: string//	搜索 loading	boolean	false
     onSearch?: () => void,
     style?: object,
-    className?: string
+    className?: string,
+    buttonType?: string,
 }
 interface TextAreaProps {
     allowClear?: boolean,	//	可以点击清除图标删除内容	boolean	false	
@@ -92,7 +94,7 @@ interface TextAreaProps {
 //     onPressEnter?: () => void,	//	按下回车的回调	function(e)	-	-
 //     onStep?: () => void,	//	点击上下箭头的回调	(value: number, info: { offset: number, type: 'up' | 'down' }) => void	-
 // }
-function Input({ prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue, style, className = '' }: Props,) {
+function Input({ right = false, prefix, size, value, placeholder, warn, warnText, label, onChange, defaultValue, style, className = '', }: Props,) {
     let inputClassName = `${Style['ez-input']} `;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} ${className}`;
     let inpuIconClassName = `${Style['action']} `;
@@ -117,16 +119,20 @@ function Input({ prefix, size, value, placeholder, warn, warnText, label, onChan
     return (
         <span className={inputWrapClassName} style={style}>
             {label ? <span className={labelClassName} >{label}</span> : ''}
-            {prefix ?
+            {prefix && !right ?
                 <span className={inputInnerSpanClassName}>
                     <span className={inpuIconClassName}>{prefix}</span>
                 </span> : ''}
             <input type="text" className={inputClassName} value={value} defaultValue={defaultValue} placeholder={placeholder} onChange={onChange} />
+            {prefix && right ?
+                <span className={inputInnerSpanClassName}>
+                    <span className={inpuIconClassName}>{prefix}</span>
+                </span> : ''}
             {warnText ? <span className={warnClassName} >{warnText}</span> : ''}
         </span>
     );
 }
-Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue, style, className = '' }: SearchProps,) {
+Input.Search = function Search({ prefix, size = 'middle', value, placeholder, warn, warnText, label, enterButton, suffix, onSearch, defaultValue, style, className = '', buttonType = 'primary' }: SearchProps,) {
     let inputClassName = `${Style['ez-input']} `;
     let inputWrapClassName = `${Style['ez-input-affix-wrapper']} `;
     let inpuIconClassName = `${Style['action']} `;
@@ -171,7 +177,7 @@ Input.Search = function Search({ prefix, size = 'middle', value, placeholder, wa
                     size={size}
                     icon={suffix ? suffix : ''}
                     shape='round'
-                    type='primary'
+                    type={buttonType}
                 >{enterButton}</Button>
             </span>
         </span>

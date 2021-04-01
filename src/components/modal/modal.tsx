@@ -36,9 +36,11 @@ interface Props {
     size?: string,
     children?: ReactElement | string | ReactElement[],//
     placement?: string,
-    style?: object,
+    // style?: object,
     className?: string
     icon?: ReactElement | string,//message  icon
+    innerStyle?: object,
+    outerStyle?: object,
 }
 function Modal({
     size = 'middle',
@@ -52,7 +54,9 @@ function Modal({
     cancelText,
     cancelType = '',
     centered = false,
-    style,
+    // style,
+    innerStyle,
+    outerStyle,
     className = '',
     closeIcon
 }: Props,) {
@@ -75,9 +79,9 @@ function Modal({
             break;
     }
     return (
-        <div className={`${className} ${Style['ez-modal-mask']}`} >
+        <div className={`${className} ${Style['ez-modal-mask']}`} style={outerStyle}>
             <div className={Style['ez-modal-wrap']}>
-                <div className={modalContentClassName} style={style}>
+                <div className={modalContentClassName} style={innerStyle}>
                     <Button onClick={onCancel}
                         type='text'
                         size={size}
@@ -226,7 +230,7 @@ Modal.Message = function Tooltip({
     placement = 'bottom',
     icon,
     className = '',
-    style
+    style,
 }: Props,) {
     let modalContentClassName = `${Style['ez-modal-content']} `;
     modalContentClassName = modalContentClassName + (centered ? `${Style['ez-modal-content-center']} ` : '')
