@@ -33,14 +33,15 @@ function Button({
     target,
     style,
     className = '' }: Props,) {
-    let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
+    let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
+    // let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
     // ;
     buttonClasName = ` ${buttonClasName} ${className}`
     let ezIconClassName = `${Style['ezicon']} `;
 
     switch (size) {
         case 'big':
-            buttonClasName = classNames(buttonClasName , `${Style['ez-btn-bg']} `);
+            buttonClasName = classNames(buttonClasName, `${Style['ez-btn-bg']} `);
             break;
         case 'middle':
             buttonClasName = buttonClasName + `${Style['ez-btn-md']} `;
