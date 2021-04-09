@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Style from './modal.module.less';
-import Button from '../button/button1';
+import Button from '../button/button';
 
 interface Props {
     afterClose?: boolean,//	Modal 完全关闭后的回调	function	-	
