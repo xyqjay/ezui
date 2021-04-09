@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Style from './button.module.less';
+import './button.module.less';
 import classNames from 'classnames';
 
 interface Props {
@@ -32,57 +32,17 @@ function Button({
     href,
     target,
     style,
-    className = '' }: Props,) {
-    let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
-    // let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
-    // ;
-    buttonClasName = ` ${buttonClasName} ${className}`
-    let ezIconClassName = `${Style['ezicon']} `;
+    // className = ''
+ }: Props,) {
+    let buttonClasName = classNames({ 'ez-btn': true }, {'ez-btn-bg':true},{'ez-btn-md':true},{'ez-btn-sm':false},{'ez-btn-primary':false},{'ez-btn-text':false},{'ez-btn-link':false},{ 'ez-btn-dashed':false },{'ez-btn-default':false},{'ez-btn-round':false},{'ez-btn-circle':false},{'ez-btn-icon-only':false},{'ez-btn-disabled':false});
+  
+    let ezIconClassName =classNames({'ezicon':true});
 
-    switch (size) {
-        case 'big':
-            buttonClasName = classNames(buttonClasName, `${Style['ez-btn-bg']} `);
-            break;
-        case 'middle':
-            buttonClasName = buttonClasName + `${Style['ez-btn-md']} `;
-            break;
-        case 'small':
-            buttonClasName = buttonClasName + `${Style['ez-btn-sm']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + '';
-            break;
-    }
-    switch (type) {
-        case 'primary':
-            buttonClasName = buttonClasName + `${Style['ez-btn-primary']} `;
-            break;
-        case 'text':
-            buttonClasName = buttonClasName + `${Style['ez-btn-text']} `;
-            break;
-        case 'link':
-            buttonClasName = buttonClasName + `${Style['ez-btn-link']} `;
-            break;
-        case 'dashed':
-            buttonClasName = buttonClasName + `${Style['ez-btn-dashed']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + `${Style['ez-btn-default']} `;
-            break;
-    }
-    switch (shape) {
-        case 'round':
-            buttonClasName = buttonClasName + `${Style['ez-btn-round']} `;
-            break;
-        case 'circle':
-            buttonClasName = buttonClasName + `${Style['ez-btn-circle']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + '';
-            break;
-    }
-    buttonClasName = buttonClasName + (children ? '' : icon ? `${Style['ez-btn-icon-only']} ` : '');
-    buttonClasName = buttonClasName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
+  
+    // buttonClasName = buttonClasName + (children ? '' : icon ? `${Style['ez-btn-icon-only']} ` : '');
+    // buttonClasName = buttonClasName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
+    {/* {icon ? <span className={ezIconClassName}>{icon}</span> : ''} */}
+   // {icon ? <span className={ezIconClassName}>{icon}</span> : ''}
     return (
         href ?
             <a style={style} href={href} target={target}>
@@ -95,7 +55,7 @@ function Button({
                         }
                     }}
                     className={buttonClasName}>
-                    {icon ? <span className={ezIconClassName}>{icon}</span> : ''}
+                  
                     {children ? <span >{children}</span> : ''}
                 </button></a>
             :
@@ -108,7 +68,7 @@ function Button({
                     }
                 }}
                 className={buttonClasName}>
-                {icon ? <span className={ezIconClassName}>{icon}</span> : ''}
+              
                 {children ? <span >{children}</span> : ''}
             </button>
     );
