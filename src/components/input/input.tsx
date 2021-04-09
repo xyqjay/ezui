@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import Style from './input.module.less';
-import Button from '../button/button';
+import Button from '../button/button1';
 
 interface Props {
     addonAfter?: ReactElement,//	带标签的 input，设置后置标签	ReactNode	-	

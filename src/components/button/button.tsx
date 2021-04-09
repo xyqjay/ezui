@@ -33,8 +33,9 @@ function Button({
     target,
     style,
     className = '' }: Props,) {
-    let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
-    // let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
+    // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
+    // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
+    let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
     // ;
     buttonClasName = ` ${buttonClasName} ${className}`
     let ezIconClassName = `${Style['ezicon']} `;
