@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import Style from './button.module.less';
+import classNames from 'classnames';
 
 interface Props {
     block?: boolean,//将按钮宽度调整为其父宽度的选项
@@ -30,59 +31,23 @@ function Button({
     disabled,
     href,
     target,
-    style,
-    className = '' }: Props,) {
-    // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
-    // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
-    let buttonClasName =`${Style['ez-btn']} ${Style['ez-btn-bg']} `;
-    // ;
-    buttonClasName = ` ${buttonClasName} ${className}`
-    let ezIconClassName = `${Style['ezicon']} `;
-
-    switch (size) {
-        case 'big':
-            buttonClasName = buttonClasName + `${Style['ez-btn-bg']} `;
-            break;
-        case 'middle':
-            buttonClasName = buttonClasName + `${Style['ez-btn-md']} `;
-            break;
-        case 'small':
-            buttonClasName = buttonClasName + `${Style['ez-btn-sm']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + '';
-            break;
-    }
-    switch (type) {
-        case 'primary':
-            buttonClasName = buttonClasName + `${Style['ez-btn-primary']} `;
-            break;
-        case 'text':
-            buttonClasName = buttonClasName + `${Style['ez-btn-text']} `;
-            break;
-        case 'link':
-            buttonClasName = buttonClasName + `${Style['ez-btn-link']} `;
-            break;
-        case 'dashed':
-            buttonClasName = buttonClasName + `${Style['ez-btn-dashed']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + `${Style['ez-btn-default']} `;
-            break;
-    }
-    switch (shape) {
-        case 'round':
-            buttonClasName = buttonClasName + `${Style['ez-btn-round']} `;
-            break;
-        case 'circle':
-            buttonClasName = buttonClasName + `${Style['ez-btn-circle']} `;
-            break;
-        default:
-            buttonClasName = buttonClasName + '';
-            break;
-    }
-    buttonClasName = buttonClasName + (children ? '' : icon ? `${Style['ez-btn-icon-only']} ` : '');
-    buttonClasName = buttonClasName + (disabled ? `${Style['ez-btn-disabled']} ` : '');
+    style, }: Props,) {
+    let buttonClasName = classNames(`${Style['ez-btn-bg']} `, {
+        'ez-btn': true,
+        'ez-btn-bg': size === 'big',
+        'ez-btn-md': size === 'middle',
+        'ez-btn-sm': size === 'small',
+        'ez-btn-primary': type === 'primary',
+        'ez-btn-text': type === 'text',
+        'ez-btn-link': type === 'link',
+        'ez-btn-dashed': type === 'dashed',
+        'ez-btn-default': type === 'default',
+        'ez-btn-round': shape === 'round',
+        'ez-btn-circle': shape === 'circle',
+        'ez-btn-icon-only': children ? false : icon ? true : false,
+        'ez-btn-disabled': disabled,
+    });
+    let ezIconClassName = classNames(`${Style['ez-btn-bg']} `, { 'ezicon': true });
     return (
         href ?
             <a style={style} href={href} target={target}>
