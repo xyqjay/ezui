@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import Style from './button.module.less';
-import classNames from 'classnames';
 
 interface Props {
     block?: boolean,//将按钮宽度调整为其父宽度的选项
@@ -35,14 +34,14 @@ function Button({
     className = '' }: Props,) {
     // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
     // let buttonClasName = classNames({ 'ez-btn': true }, { 'ez-btn-bg': true });
-    let buttonClasName =classNames(`${Style['ez-btn']} `, { 'ez-btn-bg': true }) ;
+    let buttonClasName =`${Style['ez-btn']} ${Style['ez-btn-bg']} `;
     // ;
     buttonClasName = ` ${buttonClasName} ${className}`
     let ezIconClassName = `${Style['ezicon']} `;
 
     switch (size) {
         case 'big':
-            buttonClasName = classNames(buttonClasName, `${Style['ez-btn-bg']} `);
+            buttonClasName = buttonClasName + `${Style['ez-btn-bg']} `;
             break;
         case 'middle':
             buttonClasName = buttonClasName + `${Style['ez-btn-md']} `;
