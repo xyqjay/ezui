@@ -22,14 +22,14 @@ a {
     color: @fontColor;
 }
 .ez-btn.ez-btn-dashed:hover {
-    background: #ffffff;
+    background: @themeColorClass_2;
     border-color: @themeColorClass_2;
-    color: @themeColorClass_2;
+    color: #ffffff;
 }
 
 .ez-btn.ez-btn-primary:hover {
     background: @themeColorClass_3;
-    box-shadow: 0px 6px 10px 0px getFontColor(0.12);
+    box-shadow: 0px 6px 10px 0px @fontColor_3;
     border-color: @themeColorClass_3;
 }
 
@@ -71,7 +71,8 @@ a {
 .ez-btn.ez-btn-dashed.active.focus {
     outline: none;
     box-shadow: none;
-    background:#ffffff;
+    color: #ffffff;
+    background:@themeColorClass_2;
     border-color: @themeColorClass_1;
     color:@themeColorClass_1;
 }
@@ -222,9 +223,9 @@ a {
     color:@themeColorClass_2;
 }
 .ez-btn.ez-btn-dashed {
+    color: @themeColorClass_2;
     background: #ffffff;
-    border-color: getFontColor(0.08);
-    color:@fontColor;
+    border-color: @fontColor_2;
 }
 .ez-btn.ez-btn-text {
     border: none;
@@ -241,16 +242,16 @@ a {
 }
 
 .ez-btn.ez-btn-disabled {
-    background: getFontColor(0.06) !important;
-    border-color: transparent !important;
-    color: getFontColor(0.24) !important;
-    box-shadow: 0px 0px 0px 0px !important;
+    background: @fontColor_1 ;
+    border-color: transparent ;
+    color: @fontColor_4;
+    box-shadow: 0px 0px 0px 0px ;
     cursor: no-drop;
 }
 
 .ez-btn.ez-btn-text.ez-btn-disabled {
-    border: none !important;
-    background-color: #ffffff !important;
+    border: none ;
+    background-color: #ffffff ;
     background: #ffffff;
     border: none;
     font-weight: 400;
